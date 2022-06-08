@@ -5,11 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇯🇵 JP_@yzcloud_1, server: 185.160.24.143, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇯🇵 JP_@yzcloud_2, server: 185.160.24.143, port: 801, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇯🇵 JP_@yzcloud_3, server: 185.160.24.143, port: 802, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇯🇵 JP_@yzcloud_4, server: 185.160.24.143, port: 803, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇯🇵 JP_@yzcloud_5, server: 185.160.24.143, port: 804, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+
 proxy-groups:
   - name: 👉🏻TG频道＠yzcloud
     type: select
@@ -53,11 +49,7 @@ proxy-groups:
   - name: 🇯🇵 日本节点
     type: select
     proxies:
-      - 🇯🇵 JP_@yzcloud_1
-      - 🇯🇵 JP_@yzcloud_2
-      - 🇯🇵 JP_@yzcloud_3
-      - 🇯🇵 JP_@yzcloud_4
-      - 🇯🇵 JP_@yzcloud_5
+
 rules:
   - DOMAIN,*.21t.co,DIRECT
   - DOMAIN-SUFFIX,services.googleapis.cn,👉🏻TG频道＠yzcloud
