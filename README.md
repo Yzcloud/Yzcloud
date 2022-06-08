@@ -5,7 +5,7 @@
 
 
 #### *欢迎关注TG白嫖频道*  
-![800*200](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/ "欢迎关注")
+![800*200](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/bplogo.jpg "欢迎关注")
 
 -------------------------
 <div align="center">
