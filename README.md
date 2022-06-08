@@ -1,7 +1,10 @@
+-------------------------
+<div align="center">
+ 
 # **YzCloud**
 
 **#欢迎关注TG白嫖频道**
-**#点击下方一键关注
+
 -------------------------
 <div align="center">
 
@@ -17,7 +20,9 @@
 
 </div>
 
-
+-------------------------
+<div align="center">
+ 
 #### *Base64* 订阅链接  [返回](#ios)
 [![base64](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/Base64.jpg "扫描添加订阅")]
 #### *影子白嫖频道*  扫描关注频道  [返回](#ios)
