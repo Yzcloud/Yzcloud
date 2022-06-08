@@ -18,3 +18,9 @@
 </div>
 
 
+#### *Base64* 订阅链接  [返回](#ios)
+[![图片，加载不出来就不看吧](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/Base64.jpg "扫描添加订阅")]
+#### *影子白嫖频道* 扫描关注频道  [返回](#ios)
+[![图片，加载不出来就不看吧](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/yzpd.jpg "扫描关注频道")]
+#### *Clash* 订阅链接  [返回](#ios)
+[![图片，没啥，有软件之后就知道了](https://raw.githubusercontent.com/yu-steven/openit/main/images/Shadowrocket.JPG "扫描添加订阅")]
