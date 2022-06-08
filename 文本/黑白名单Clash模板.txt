@@ -1,0 +1,172 @@
+#
+#-------------------------------------------------------------#
+## 欢迎关注TG频道👉🏻 t.me/yzcloud 
+##
+## SUBSCRIBE-MANAGER VERSION: 1.0.0
+#-------------------------------------------------------------#
+#
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: rule
+log-level: silent
+external-controller: 0.0.0.0:9090
+secret: ''
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 114.114.114.114
+    - tcp://223.5.5.5
+  fallback:
+    - tls://223.5.5.5:853
+    - https://223.5.5.5/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+proxies: []
+proxy-groups:
+  - name: 🔯 代理模式
+    type: select
+    proxies:
+      - 绕过大陆丨黑名单(GFWlist)
+      - 绕过大陆丨白名单(Whitelist)
+  - name: 🔰 选择节点
+    type: select
+    proxies:
+      - DIRECT
+      - .*
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - PROXY
+  - name: 绕过大陆丨黑名单(GFWlist)
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+    proxies:
+      - DIRECT
+  - name: 绕过大陆丨白名单(Whitelist)
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+    proxies:
+      - PROXY
+  - name: PROXY
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+    proxies:
+      - 🔰 选择节点
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,🛑 广告拦截
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,🔯 代理模式
+  - MATCH,🔯 代理模式
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/reject.yaml
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/icloud.yaml
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/apple.yaml
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/google.yaml
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/proxy.yaml
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/direct.yaml
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/private.yaml
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/gfw.yaml
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/greatfire.yaml
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/tld-not-cn.yaml
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://sock.pages.dev/rules/clash/telegramcidr.yaml
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://sock.pages.dev/rules/clash/cncidr.yaml
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://sock.pages.dev/rules/clash/lancidr.yaml
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: https://sock.pages.dev/rules/clash/applications.yaml
+    path: ./ruleset/applications.yaml
+    interval: 86400
