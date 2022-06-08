@@ -17,6 +17,4 @@
 
 </div>
 
-https://github.com/ublubeu/yzcloud/blob/7de4dedc5d3123447364c12351a9ada0f6316751/%E6%96%87%E6%9C%AC/photo_2022-06-09_04-53-44.jpg?raw=true
-https://github.com/ublubeu/yzcloud/blob/main/%E6%96%87%E6%9C%AC/photo_2022-06-09_04-22-31.jpg?raw=true
-https://github.com/ublubeu/yzcloud/blob/main/%E6%96%87%E6%9C%AC/photo_2022-06-09_04-53-45.jpg?raw=true
+
