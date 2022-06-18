@@ -5,7 +5,8 @@
 ## SUBSCRIBE-MANAGER VERSION: 1.0.0
 #-------------------------------------------------------------#
 #
-mixed-port: 7890
+port: 7890
+socks-port: 7891
 allow-lan: true
 bind-address: '*'
 mode: rule
