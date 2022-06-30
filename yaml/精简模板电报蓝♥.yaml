@@ -41,6 +41,7 @@ proxy-groups:
     type: select
     proxies:
       - 🔯 自动选择
+      - ☸️ 负载均衡
       - 🔰 故障转移
       - .*
   - name: 🔯 自动选择
@@ -55,6 +56,12 @@ proxy-groups:
       - .*
     url: http://www.gstatic.com/generate_204
     interval: 7200
+  - name: ☸️ 负载均衡
+    proxies:
+      - .*
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: '10'
 rules:
   - DOMAIN,*.21t.co,DIRECT
   - DOMAIN-SUFFIX,services.googleapis.cn,💙 电报频道＠yzcloud
