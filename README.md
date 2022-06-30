@@ -22,11 +22,6 @@
 -------------------------
 <div align="center">
  
-#### *Base64* 订阅链接 
-[![base64](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/Base64.jpg "扫描添加订阅")]
-#### *影子白嫖频道*  扫描关注频道 
-[![白嫖频道](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/yzpd.jpg "扫描关注频道")]
-#### *Clash* 订阅链接 
-[![clash](https://raw.githubusercontent.com/ublubeu/yzcloud/main/images/Clash.jpg "扫描添加订阅")]
+
 
 
