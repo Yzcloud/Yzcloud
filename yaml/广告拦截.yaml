@@ -479,7 +479,7 @@ rules:
   - DOMAIN-SUFFIX,sharethis.com,TG频道＠yzcloud
   - DOMAIN-SUFFIX,shazam.com,TG频道＠yzcloud
   - DOMAIN-SUFFIX,skype.com,TG频道＠yzcloud
-  - DOMAIN-SUFFIX,smartdns💙 电报频道＠yzcloud.com,TG频道＠yzcloud
+  - DOMAIN-SUFFIX,smartdns,TG频道＠yzcloud
   - DOMAIN-SUFFIX,smartmailcloud.com,TG频道＠yzcloud
   - DOMAIN-SUFFIX,sndcdn.com,TG频道＠yzcloud
   - DOMAIN-SUFFIX,sony.com,TG频道＠yzcloud
