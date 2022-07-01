@@ -64,7 +64,7 @@ proxy-groups:
     _index: 3
   - name: 🟣 漏网之鱼
     proxies:
-      - 🟢 自动选择
+      - 🔵 影子白嫖
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: '60'
