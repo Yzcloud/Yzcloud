@@ -59,10 +59,10 @@ proxy-groups:
     proxies:
       - DIRECT
       - REJECT
-      - 🟣 落网之鱼
+      - 🟣 漏网之鱼
     type: select
     _index: 3
-  - name: 🟣 落网之鱼
+  - name: 🟣 漏网之鱼
     proxies:
       - 🟢 自动选择
     type: url-test
@@ -77,10 +77,10 @@ rules:
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
   - RULE-SET,google,DIRECT
-  - RULE-SET,tld-not-cn,🟣 落网之鱼
-  - RULE-SET,gfw,🟣 落网之鱼
-  - RULE-SET,greatfire,🟣 落网之鱼
-  - RULE-SET,telegramcidr,🟣 落网之鱼
+  - RULE-SET,tld-not-cn,🟣 漏网之鱼
+  - RULE-SET,gfw,🟣 漏网之鱼
+  - RULE-SET,greatfire,🟣 漏网之鱼
+  - RULE-SET,telegramcidr,🟣 漏网之鱼
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
   - GEOIP,,DIRECT
