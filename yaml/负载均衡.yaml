@@ -1,0 +1,697 @@
+#
+#-------------------------------------------------------------#
+## TG频道:影子免费VPN节点分享机场订阅🔔
+## TG链接:https://t.me/yzcloud
+## 创建时间：{{@date}}
+## 节点数量：{{@count}}
+## SUBSCRIBE-MANAGER VERSION: 1.0.0
+#-------------------------------------------------------------#
+#
+port: 7890
+socks-port: 7891
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - tls://1.0.0.1:853
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies: []
+proxy-groups:
+  - name: ⚪️ 影子白嫖
+    proxies:
+      - 🟢 自动选择
+      - 🟡 负载均衡
+      - 🔵 故障转移
+      - .*
+    type: select
+  - name: 🟢 自动选择
+    proxies:
+      - .*
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: '60'
+    _index: 1
+  - name: 🔵 故障转移
+    proxies:
+      - .*
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: '30'
+    _index: 2
+  - name: 🟡 负载均衡
+    proxies:
+      - .*
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: '10'
+    _index: 3
+  - name: 🔴 广告拦截
+    proxies:
+      - DIRECT
+      - REJECT
+      - 🟣 落网之鱼
+    type: select
+    _index: 4
+  - name: 🟣 落网之鱼
+    proxies:
+      - 🟢 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: '10'
+    _index: 5
+rules:
+  - DOMAIN,*.21t.co,DIRECT
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,🔴 广告拦截
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,🟣 落网之鱼
+  - RULE-SET,gfw,🟣 落网之鱼
+  - RULE-SET,greatfire,🟣 落网之鱼
+  - RULE-SET,telegramcidr,🟣 落网之鱼
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - DOMAIN-SUFFIX,services.googleapis.cn,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,⚪️ 影子白嫖
+  - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+  - DOMAIN,safebrowsing.googleapis.com,DIRECT
+  - DOMAIN,developer.apple.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,digicert.com,⚪️ 影子白嫖
+  - DOMAIN,ocsp.apple.com,⚪️ 影子白嫖
+  - DOMAIN,ocsp.comodoca.com,⚪️ 影子白嫖
+  - DOMAIN,ocsp.usertrust.com,⚪️ 影子白嫖
+  - DOMAIN,ocsp.sectigo.com,⚪️ 影子白嫖
+  - DOMAIN,ocsp.verisign.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,apple-dns.net,⚪️ 影子白嫖
+  - DOMAIN,testflight.apple.com,⚪️ 影子白嫖
+  - DOMAIN,sandbox.itunes.apple.com,⚪️ 影子白嫖
+  - DOMAIN,itunes.apple.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,apps.apple.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,blobstore.apple.com,⚪️ 影子白嫖
+  - DOMAIN,cvws.icloud-content.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+  - DOMAIN-SUFFIX,me.com,DIRECT
+  - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+  - DOMAIN-SUFFIX,cdn20.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,akadns.net,DIRECT
+  - DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+  - DOMAIN-SUFFIX,edgekey.net,DIRECT
+  - DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+  - DOMAIN-SUFFIX,mwcname.com,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+  - DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - DOMAIN-SUFFIX,126.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,127.net,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,36kr.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.tv,DIRECT
+  - DOMAIN-SUFFIX,air-matters.com,DIRECT
+  - DOMAIN-SUFFIX,aixifan.com,DIRECT
+  - DOMAIN-KEYWORD,alicdn,DIRECT
+  - DOMAIN-KEYWORD,alipay,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-SUFFIX,amap.com,DIRECT
+  - DOMAIN-SUFFIX,autonavi.com,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-SUFFIX,bdimg.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+  - DOMAIN-SUFFIX,clouddn.com,DIRECT
+  - DOMAIN-SUFFIX,cnbeta.com,DIRECT
+  - DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+  - DOMAIN-SUFFIX,cootekservice.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,dgtle.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,douban.com,DIRECT
+  - DOMAIN-SUFFIX,doubanio.com,DIRECT
+  - DOMAIN-SUFFIX,duokan.com,DIRECT
+  - DOMAIN-SUFFIX,easou.com,DIRECT
+  - DOMAIN-SUFFIX,ele.me,DIRECT
+  - DOMAIN-SUFFIX,feng.com,DIRECT
+  - DOMAIN-SUFFIX,fir.im,DIRECT
+  - DOMAIN-SUFFIX,frdic.com,DIRECT
+  - DOMAIN-SUFFIX,g-cores.com,DIRECT
+  - DOMAIN-SUFFIX,godic.net,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN,cdn.hockeyapp.net,DIRECT
+  - DOMAIN-SUFFIX,hongxiu.com,DIRECT
+  - DOMAIN-SUFFIX,hxcdn.net,DIRECT
+  - DOMAIN-SUFFIX,iciba.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,ifengimg.com,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN-SUFFIX,knewone.com,DIRECT
+  - DOMAIN-SUFFIX,le.com,DIRECT
+  - DOMAIN-SUFFIX,lecloud.com,DIRECT
+  - DOMAIN-SUFFIX,lemicp.com,DIRECT
+  - DOMAIN-SUFFIX,licdn.com,DIRECT
+  - DOMAIN-SUFFIX,luoo.net,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
+  - DOMAIN-SUFFIX,miaopai.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,miui.com,DIRECT
+  - DOMAIN-SUFFIX,miwifi.com,DIRECT
+  - DOMAIN-SUFFIX,mob.com,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-KEYWORD,officecdn,DIRECT
+  - DOMAIN-SUFFIX,oschina.net,DIRECT
+  - DOMAIN-SUFFIX,ppsimg.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,qcloud.com,DIRECT
+  - DOMAIN-SUFFIX,qdaily.com,DIRECT
+  - DOMAIN-SUFFIX,qdmm.com,DIRECT
+  - DOMAIN-SUFFIX,qhimg.com,DIRECT
+  - DOMAIN-SUFFIX,qhres.com,DIRECT
+  - DOMAIN-SUFFIX,qidian.com,DIRECT
+  - DOMAIN-SUFFIX,qihucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiniu.com,DIRECT
+  - DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+  - DOMAIN-SUFFIX,qiyipic.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,qqurl.com,DIRECT
+  - DOMAIN-SUFFIX,rarbg.to,DIRECT
+  - DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+  - DOMAIN-SUFFIX,segmentfault.com,DIRECT
+  - DOMAIN-SUFFIX,sinaapp.com,DIRECT
+  - DOMAIN-SUFFIX,smzdm.com,DIRECT
+  - DOMAIN-SUFFIX,snapdrop.net,DIRECT
+  - DOMAIN-SUFFIX,sogou.com,DIRECT
+  - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,soku.com,DIRECT
+  - DOMAIN-SUFFIX,speedtest.net,DIRECT
+  - DOMAIN-SUFFIX,sspai.com,DIRECT
+  - DOMAIN-SUFFIX,suning.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tenpay.com,DIRECT
+  - DOMAIN-SUFFIX,tianyancha.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,tudou.com,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
+  - DOMAIN-SUFFIX,upaiyun.com,DIRECT
+  - DOMAIN-SUFFIX,upyun.com,DIRECT
+  - DOMAIN-SUFFIX,veryzhun.com,DIRECT
+  - DOMAIN-SUFFIX,weather.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.com,DIRECT
+  - DOMAIN-SUFFIX,xiami.net,DIRECT
+  - DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+  - DOMAIN-SUFFIX,ximalaya.com,DIRECT
+  - DOMAIN-SUFFIX,xmcdn.com,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,yhd.com,DIRECT
+  - DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+  - DOMAIN-SUFFIX,yinxiang.com,DIRECT
+  - DOMAIN-SUFFIX,ykimg.com,DIRECT
+  - DOMAIN-SUFFIX,youdao.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,zealer.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhimg.com,DIRECT
+  - DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+  - DOMAIN-SUFFIX,zoho.com,DIRECT
+  - DOMAIN-KEYWORD,amazon,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,google,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,gmail,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,youtube,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,facebook,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,fb.me,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,fbcdn.net,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,twitter,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,instagram,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,dropbox,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,twimg.com,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,blogspot,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,youtu.be,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,whatsapp,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,admarvel,REJECT
+  - DOMAIN-KEYWORD,admaster,REJECT
+  - DOMAIN-KEYWORD,adsage,REJECT
+  - DOMAIN-KEYWORD,adsmogo,REJECT
+  - DOMAIN-KEYWORD,adsrvmedia,REJECT
+  - DOMAIN-KEYWORD,adwords,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,appsflyer.com,REJECT
+  - DOMAIN-KEYWORD,domob,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-KEYWORD,duomeng,REJECT
+  - DOMAIN-KEYWORD,dwtrack,REJECT
+  - DOMAIN-KEYWORD,guanggao,REJECT
+  - DOMAIN-KEYWORD,lianmeng,REJECT
+  - DOMAIN-SUFFIX,mmstat.com,REJECT
+  - DOMAIN-KEYWORD,mopub,REJECT
+  - DOMAIN-KEYWORD,omgmta,REJECT
+  - DOMAIN-KEYWORD,openx,REJECT
+  - DOMAIN-KEYWORD,partnerad,REJECT
+  - DOMAIN-KEYWORD,pingfore,REJECT
+  - DOMAIN-KEYWORD,supersonicads,REJECT
+  - DOMAIN-KEYWORD,uedas,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-KEYWORD,usage,REJECT
+  - DOMAIN-SUFFIX,vungle.com,REJECT
+  - DOMAIN-KEYWORD,wlmonitor,REJECT
+  - DOMAIN-KEYWORD,zjtoolbar,REJECT
+  - DOMAIN-SUFFIX,9to5mac.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,abpchina.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,adblockplus.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,adobe.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,akamaized.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,alfredapp.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,amplitude.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ampproject.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,android.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,angularjs.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,aolcdn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,apkpure.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,appledaily.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,appshopper.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,appspot.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,arcgis.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,archive.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,armorgames.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,aspnetcdn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,att.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,awsstatic.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,azureedge.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,azurewebsites.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bing.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bintray.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bit.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bit.ly,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bitbucket.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bjango.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bkrtx.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,blog.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,blogcdn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,blogger.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,blogsmithmedia.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,blogspot.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,blogspot.hk,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,bloomberg.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,box.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,box.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cachefly.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,chromium.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cl.ly,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cloudflare.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cloudfront.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cloudmagic.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cmail19.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cnet.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,cocoapods.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,comodoca.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,crashlytics.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,culturedcode.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,d.pr,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,danilo.to,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,dayone.me,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,db.tt,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,deskconnect.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,disq.us,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,disqus.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,disquscdn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,dnsimple.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,docker.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,dribbble.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,droplr.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,duckduckgo.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,dueapp.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,dytt8.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,edgecastcdn.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,edgekey.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,edgesuite.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,engadget.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,entrust.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,eurekavpt.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,evernote.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,fabric.io,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,fast.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,fastly.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,fc2.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,feedburner.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,feedly.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,feedsportal.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,fiftythree.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,firebaseio.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,flexibits.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,flickr.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,flipboard.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,g.co,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,gabia.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,geni.us,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,gfx.ms,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ggpht.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ghostnoteapp.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,git.io,⚪️ 影子白嫖
+  - DOMAIN-KEYWORD,github,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,globalsign.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,gmodules.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,godaddy.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,golang.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,gongm.in,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,goo.gl,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,goodreaders.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,goodreads.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,gravatar.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,gstatic.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,gvt0.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,hockeyapp.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,hotmail.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,icons8.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ifixit.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ift.tt,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ifttt.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,iherb.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,imageshack.us,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,img.ly,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,imgur.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,imore.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,instapaper.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ipn.li,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,is.gd,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,issuu.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,itgonglun.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,itun.es,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ixquick.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,j.mp,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,js.revsci.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,jshint.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,jtvnw.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,justgetflux.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,kat.cr,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,klip.me,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,libsyn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,linkedin.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,linode.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,lithium.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,littlehj.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,live.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,live.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,livefilestore.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,llnwd.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,macid.co,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,macromedia.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,macrumors.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,mashable.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,mathjax.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,medium.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,mega.co.nz,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,mega.nz,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,megaupload.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,microsofttranslator.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,mindnode.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,mobile01.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,modmyi.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,msedge.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,myfontastic.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,name.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,nextmedia.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,nsstatic.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,nssurge.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,nyt.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,nytimes.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,omnigroup.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,onedrive.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,onenote.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ooyala.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,openvpn.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,openwrt.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,orkut.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,osxdaily.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,outlook.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ow.ly,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,paddleapi.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,parallels.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,parse.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,pdfexpert.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,periscope.tv,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,pinboard.in,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,pinterest.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,pixelmator.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,pixiv.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,playpcesor.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,playstation.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,playstation.com.hk,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,playstation.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,playstationnetwork.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,pushwoosh.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,rime.im,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,servebom.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,sfx.ms,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,shadowsocks.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,sharethis.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,shazam.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,skype.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,smartdns,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,smartmailcloud.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,sndcdn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,sony.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,soundcloud.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,sourceforge.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,spotify.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,squarespace.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,sstatic.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,st.luluku.pw,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,stackoverflow.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,startpage.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,staticflickr.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,steamcommunity.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,symauth.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,symcb.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,symcd.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tapbots.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tapbots.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tdesktop.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,techcrunch.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,techsmith.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,thepiratebay.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,theverge.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,time.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,timeinc.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tiny.cc,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tinypic.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tmblr.co,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,todoist.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,trello.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,trustasiassl.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tumblr.co,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tumblr.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tweetdeck.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,tweetmarker.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,twitch.tv,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,txmblr.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,typekit.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ubertags.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ublock.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ubnt.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ulyssesapp.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,urchin.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,usertrust.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,v.gd,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,v2ex.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,vimeo.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,vimeocdn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,vine.co,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,vivaldi.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,vox-cdn.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,vsco.co,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,vultr.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,w.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,w3schools.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,webtype.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wikiwand.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wikileaks.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wikimedia.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wikipedia.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wikipedia.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,windows.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,windows.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wire.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wordpress.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,workflowy.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wp.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wsj.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,wsj.net,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,xda-developers.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,xeeno.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,xiti.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,yahoo.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,yimg.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ying.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,yoyo.org,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,ytimg.com,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,telegra.ph,⚪️ 影子白嫖
+  - DOMAIN-SUFFIX,telegram.org,⚪️ 影子白嫖
+  - IP-CIDR,91.108.4.0/22,⚪️ 影子白嫖,
+  - IP-CIDR,91.108.8.0/21,⚪️ 影子白嫖,
+  - IP-CIDR,91.108.16.0/22,⚪️ 影子白嫖,
+  - IP-CIDR,91.108.56.0/22,⚪️ 影子白嫖,
+  - IP-CIDR,149.154.160.0/20,⚪️ 影子白嫖,
+  - IP-CIDR6,2001:67c:4e8::/48,⚪️ 影子白嫖,
+  - IP-CIDR6,2001:b28:f23d::/48,⚪️ 影子白嫖,
+  - IP-CIDR6,2001:b28:f23f::/48,⚪️ 影子白嫖,
+  - IP-CIDR,120.232.181.162/32,⚪️ 影子白嫖,
+  - IP-CIDR,120.241.147.226/32,⚪️ 影子白嫖,
+  - IP-CIDR,120.253.253.226/32,⚪️ 影子白嫖,
+  - IP-CIDR,120.253.255.162/32,⚪️ 影子白嫖,
+  - IP-CIDR,120.253.255.34/32,⚪️ 影子白嫖,
+  - IP-CIDR,120.253.255.98/32,⚪️ 影子白嫖,
+  - IP-CIDR,180.163.150.162/32,⚪️ 影子白嫖,
+  - IP-CIDR,180.163.150.34/32,⚪️ 影子白嫖,
+  - IP-CIDR,180.163.151.162/32,⚪️ 影子白嫖,
+  - IP-CIDR,180.163.151.34/32,⚪️ 影子白嫖,
+  - IP-CIDR,203.208.39.0/24,⚪️ 影子白嫖,
+  - IP-CIDR,203.208.40.0/24,⚪️ 影子白嫖,
+  - IP-CIDR,203.208.41.0/24,⚪️ 影子白嫖,
+  - IP-CIDR,203.208.43.0/24,⚪️ 影子白嫖,
+  - IP-CIDR,203.208.50.0/24,⚪️ 影子白嫖,
+  - IP-CIDR,220.181.174.162/32,⚪️ 影子白嫖,
+  - IP-CIDR,220.181.174.226/32,⚪️ 影子白嫖,
+  - IP-CIDR,220.181.174.34/32,⚪️ 影子白嫖,
+  - DOMAIN,injections.adguard.org,DIRECT
+  - DOMAIN,local.adguard.org,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,⚪️ 影子白嫖
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/reject.yaml
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/icloud.yaml
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/apple.yaml
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/google.yaml
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/proxy.yaml
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/direct.yaml
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/private.yaml
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/gfw.yaml
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/greatfire.yaml
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://sock.pages.dev/rules/clash/tld-not-cn.yaml
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://sock.pages.dev/rules/clash/telegramcidr.yaml
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://sock.pages.dev/rules/clash/cncidr.yaml
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://sock.pages.dev/rules/clash/lancidr.yaml
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: https://sock.pages.dev/rules/clash/applications.yaml
+    path: ./ruleset/applications.yaml
+    interval: 86400
