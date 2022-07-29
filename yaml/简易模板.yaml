@@ -4,7 +4,7 @@
 ## 欢迎关注-->https://t.me/Yzcloud
 ## 创建时间：{{@date}}
 ## 节点数量：{{@count}}
-## SUBSCRIBE-MANAGER VERSION: 1.0.2
+## SUBSCRIBE-MANAGER VERSION: 1.0.0
 #-------------------------------------------------------------#
 #
 port: 7890
