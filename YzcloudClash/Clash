@@ -56,7 +56,7 @@ proxy-groups:
       #- local # 开启本地配置导入取消注释该行
       
 # 节点配置文件统一存放在 ./profiles/YzcloudClash/ 目录中
-# 多个配置文件请参照71行-80行添加修改 
+# 多个配置文件请参照74行-83行添加修改 
 # [proxy-groups]下[use]需添加对应代理名 如：YzTemporary
 proxy-providers:
 # 从链接导入的配置文件（支持多个Clash 订阅链接）
@@ -85,6 +85,7 @@ proxy-providers:
  # 从本地导入的 clash 配置文件
  # 需建立YzcloudClash/local.yaml文件 本地配置文件名改为-->local
  # 右击当前配置文件-->打开所在文件夹-->新建YzcloudClash文件夹
+ # 使用本地导入 以下7行取消注释
  #local:
    #type: file
    #path: ./profiles/YzcloudClash/local.yaml
