@@ -171,6 +171,8 @@ proxy-providers:
 #     enable: true
 #     url: http://www.gstatic.com/generate_204
 #     interval: 600 
+
+#分流规则
 rules:
   - DOMAIN-SUFFIX,t.me,🔵 影子白嫖
   - DOMAIN-SUFFIX,tdesktop.com,🔵 影子白嫖
