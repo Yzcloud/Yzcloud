@@ -2,8 +2,7 @@
 #-------------------------------------------------------------#
 ## TG频道:Yzcloud免费VPN节点机场订阅 🅥
 ## 欢迎关注-->https://t.me/Yzcloud
-## 本配置参考各大佬资料修改
-## 感谢各位大佬的无私分享
+## 感谢各位配置及规则集大佬的无私分享
 ## SUBSCRIBE-MANAGER VERSION: 1.0.0
 #-------------------------------------------------------------#
 #
@@ -26,7 +25,7 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入取消注释该行
+      #- local # 开启本地配置导入请取消注释该行
   - name: 🟢 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -35,7 +34,7 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入取消注释该行
+      #- local # 开启本地配置导入请取消注释该行
   - name: 🟡 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -44,7 +43,7 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入取消注释该行
+      #- local # 开启本地配置导入请取消注释该行
   - name: 🟣 负载均衡
     proxies:
     type: load-balance
@@ -53,11 +52,19 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入取消注释该行
-      
+      #- local # 开启本地配置导入请取消注释该行
+#
+#-----------------------------------------------------#
+# 如需开启多订阅及本地导入
+# 可以复制全部配置到本地使用
+# 以免更新订阅后自建配置失效
+# 配置本地使用后续更新频道节点 请至服务商内更新
+#-----------------------------------------------------#
 # 节点配置文件统一存放在 ./profiles/YzcloudClash/ 目录中
-# 多个配置文件请参考74行-83行添加修改 
+# 多个配置文件请参考80行-89行添加修改 
 # [proxy-groups]下[use]需添加对应代理名 如：YzTemporary
+#-----------------------------------------------------#
+#
 proxy-providers:
 # 从链接导入的配置文件（支持多个Clash 订阅链接）
  Yzcloud:
@@ -80,12 +87,15 @@ proxy-providers:
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
-     interval: 300    
-
- # 从本地导入的 clash 配置文件
- # 将本地配置文件重命名为-->local.yaml
- # 右击当前配置-->打开所在文件夹-->将local.yaml放入[YzcloudClash]文件夹内
- # 使用本地导入 请取消注释以下7行和[proxy-groups]下[local]
+     interval: 300  
+#
+#-----------------------------------------------------#
+# 从本地导入的 clash 配置文件
+# 将本地配置文件重命名为-->local.yaml
+# 右击当前配置-->打开所在文件夹-->将local.yaml放入[YzcloudClash]文件夹内
+# 使用本地导入 请取消注释以下7行和[proxy-groups]下[local]
+#-----------------------------------------------------#
+#
  #local:
    #type: file
    #path: ./profiles/YzcloudClash/local.yaml
