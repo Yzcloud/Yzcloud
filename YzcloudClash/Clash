@@ -62,7 +62,7 @@ proxy-providers:
 # 从链接导入的配置文件（支持多个Clash 订阅链接）
  Yzcloud:
    type: http
-   path: YzcloudClash/Yzcloud.yaml
+   path: ./profiles/YzcloudClash/Yzcloud.yaml
    url: https://tt.vg/vpn
    interval: 3600 
    filter:  #'Hong Kong' # 删选出含有该关键词的节点
@@ -73,7 +73,7 @@ proxy-providers:
  
  YzTemporary:
    type: http
-   path: YzcloudClash/YzTemporary.yaml
+   path: ./profiles/YzcloudClash/YzTemporary.yaml
    url: https://tt.vg/svip
    interval: 3600 
    filter:  #'Hong Kong' # 删选出含有该关键词的节点
@@ -85,13 +85,13 @@ proxy-providers:
  # 从本地导入的 clash 配置文件
  # 需建立YzcloudClash/local.yaml文件 本地配置文件名改为-->local
  # 右击当前配置文件-->打开所在文件夹-->新建YzcloudClash文件夹
- local:
-   type: file
-   path: ./profiles/YzcloudClash/local.yaml
-   health-check:
-     enable: true
-     url: http://www.gstatic.com/generate_204
-     interval: 600  
+ #local:
+   #type: file
+   #path: ./profiles/YzcloudClash/local.yaml
+   #health-check:
+     #enable: true
+     #url: http://www.gstatic.com/generate_204
+     #interval: 600  
 
 # clash-rules项目提供的规则集
 rule-providers:
