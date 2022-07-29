@@ -25,4 +25,4 @@ proxies:
   - {"type":"ss","name":"|荷兰@Yzcloud★66","server":"213.183.59.177","port":9057,"cipher":"aes-256-cfb","password":"wjTugX3ZtHMB9c3Z"}
   - {"type":"ss","name":"|日本@Yzcloud★42","server":"85.208.108.21","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
   - {"type":"vmess","name":"|美国@Yzcloud★82","ws-opts":{"path":"/je5x3pBN1vez3NQudNkB","headers":{"host":"us-lax-ctg-01-v2.cdn.savoy.click"}},"server":"us-lax-ctg-01-v2.cdn.savoy.click","port":"888","uuid":"b536533e-6fa0-4575-a1f8-bbf81a194f44","alterId":"0","cipher":"auto","network":"ws","tls":true}
-1
+  
