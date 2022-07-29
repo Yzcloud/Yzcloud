@@ -135,7 +135,7 @@ proxy-providers:
  Yzcloud:
    type: http
    path: ./profiles/YzcloudClash/Yzcloud.yaml
-   url: https://tt.vg/vpn
+   url: https://tt.vg/vpn  # Clash订阅链接
    interval: 3600 
    filter:  #'Hong Kong' # 删选出含有该关键词的节点
    health-check:
@@ -148,7 +148,7 @@ proxy-providers:
  YzTemporary:
    type: http
    path: ./profiles/YzcloudClash/YzTemporary.yaml
-   url: https://tt.vg/svip
+   url: https://tt.vg/svip  # Clash订阅链接
    interval: 3600 
    filter:  #'Hong Kong' # 删选出含有该关键词的节点
    health-check:
