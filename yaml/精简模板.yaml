@@ -1,67 +1,117 @@
 #
 #-------------------------------------------------------------#
-## TG频道:影子免费VPN节点分享机场订阅🔔
-## TG链接:https://t.me/yzcloud
+## TG频道:Yzcloud免费VPN节点机场订阅 🅥
+## 欢迎关注-->https://t.me/Yzcloud
 ## 创建时间：{{@date}}
 ## 节点数量：{{@count}}
-## SUBSCRIBE-MANAGER VERSION: 1.0.0
+## SUBSCRIBE-MANAGER VERSION: 1.0.2
 #-------------------------------------------------------------#
 #
 port: 7890
 socks-port: 7891
 allow-lan: true
-bind-address: '*'
-mode: rule
+mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 dns:
   enable: true
-  ipv6: false
-  default-nameserver:
+  nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  enhanced-mode: redir-host
-  fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
   fallback:
-    - tls://1.0.0.1:853
+    - https://doh.buzz:8000/dns-query
     - https://cloudflare-dns.com/dns-query
+    - tls://1.1.1.1:853
+    - tls://1.0.0.1:853
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+    - tls://8.8.8.8:853
+    - tls://8.8.4.4:853
     - https://dns.google/dns-query
+    - https://dns.twnic.tw/dns-query
   fallback-filter:
     geoip: true
+    geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-      - 0.0.0.0/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.youtube.com
+  nameserver-policy: null
+cfw-bypass:
+  - qq.com
+  - music.163.com
+  - '*.music.126.net'
+  - localhost
+  - 127.*
+  - 10.*
+  - 172.16.*
+  - 172.17.*
+  - 172.18.*
+  - 172.19.*
+  - 172.20.*
+  - 172.21.*
+  - 172.22.*
+  - 172.23.*
+  - 172.24.*
+  - 172.25.*
+  - 172.26.*
+  - 172.27.*
+  - 172.28.*
+  - 172.29.*
+  - 172.30.*
+  - 172.31.*
+  - 192.168.*
+  - <local>
+cfw-latency-timeout: 5000
 proxies: []
 proxy-groups:
-  - name: 💙 电报频道＠yzcloud
+  - name: 🔵 影子白嫖
+    proxies:
+      - 🟢 自动选择
+      - 🟡 故障转移
+      - 🟣 负载均衡
+      - .*
     type: select
+  - name: 🟢 自动选择
     proxies:
-      - 🔯 自动选择
-      - ☸️ 负载均衡
-      - 🔰 故障转移
       - .*
-  - name: 🔯 自动选择
     type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: '300'
+  - name: 🟡 故障转移
     proxies:
       - .*
-    url: http://www.gstatic.com/generate_204
-    interval: 86400
-  - name: 🔰 故障转移
     type: fallback
-    proxies:
-      - .*
     url: http://www.gstatic.com/generate_204
-    interval: 7200
-  - name: ☸️ 负载均衡
+    interval: '300'
+  - name: 🔴 广告拦截
+    proxies:
+      - 🔵 影子白嫖
+      - DIRECT
+      - REJECT
+    type: select
+    _index: 4
+  - name: 🟣 漏网之鱼
+    proxies:
+      - 🔵 影子白嫖
+      - DIRECT
+      - REJECT
+    type: select
+    _index: 4
+  - name: 🔴 国内网站
+    proxies:
+      - DIRECT
+      - REJECT
+      - 🔵 影子白嫖
+    type: select
+  - name: 🟣 负载均衡
     proxies:
       - .*
     type: load-balance
     url: http://www.gstatic.com/generate_204
-    interval: '10'
+    interval: 600
 rules:
   - DOMAIN,*.21t.co,DIRECT
   - DOMAIN-SUFFIX,services.googleapis.cn,💙 电报频道＠yzcloud
