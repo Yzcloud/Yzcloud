@@ -76,7 +76,7 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入请取消注释本行
+  #    - local # 开启本地配置导入请取消注释本行
   - name: 🟢 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -85,7 +85,7 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入请取消注释本行
+  #    - local # 开启本地配置导入请取消注释本行
   - name: 🟡 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -94,7 +94,7 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入请取消注释本行
+  #    - local # 开启本地配置导入请取消注释本行
   - name: 🔴 广告拦截
     type: select
     proxies:
@@ -121,7 +121,7 @@ proxy-groups:
     use:
       - Yzcloud
       - YzTemporary
-      #- local # 开启本地配置导入请取消注释本行      
+  #    - local # 开启本地配置导入请取消注释本行      
 #
 #-----------------------------------------------------#
 # 如需开启多订阅及本地导入
@@ -164,13 +164,13 @@ proxy-providers:
 # 多个本地配置请复制及修改local为新文件名
 #-----------------------------------------------------#
 #
- #local:
-   #type: file
-   #path: ./profiles/YzcloudClash/local.yaml
-   #health-check:
-     #enable: true
-     #url: http://www.gstatic.com/generate_204
-     #interval: 600 
+# local:
+#   type: file
+#   path: ./profiles/YzcloudClash/local.yaml
+#   health-check:
+#     enable: true
+#     url: http://www.gstatic.com/generate_204
+#     interval: 600 
 rules:
   - DOMAIN-SUFFIX,t.me,🔵 影子白嫖
   - DOMAIN-SUFFIX,tdesktop.com,🔵 影子白嫖
