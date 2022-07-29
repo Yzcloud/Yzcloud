@@ -1,0 +1,27 @@
+proxies:
+  - {"type":"ss","name":"|日本@Yzcloud★40","server":"85.208.108.21","port":5001,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"|日本@Yzcloud★39","server":"85.208.108.58","port":6379,"cipher":"aes-256-gcm","password":"zDNVedRFPQexG9v"}
+  - {"type":"ss","name":"|日本@Yzcloud★54","server":"85.208.108.59","port":5500,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"|美国@Yzcloud★50","server":"38.91.102.30","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"ss","name":"|美国@Yzcloud★68","server":"38.114.114.19","port":8119,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
+  - {"type":"ss","name":"|美国@Yzcloud★62","server":"38.91.102.30","port":8000,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"|日本@Yzcloud★29","server":"85.208.108.58","port":5601,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"|美国@Yzcloud★53","server":"38.121.43.71","port":443,"cipher":"aes-256-gcm","password":"pKEW8JPByTVTLtM"}
+  - {"type":"ss","name":"|美国@Yzcloud★67","server":"38.68.134.85","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"ss","name":"|日本@Yzcloud★34","server":"85.208.108.59","port":8888,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"|美国@Yzcloud★8","server":"38.121.43.71","port":6379,"cipher":"aes-256-gcm","password":"zDNVedRFPQexG9v"}
+  - {"type":"ss","name":"|美国@Yzcloud★47","server":"38.114.114.67","port":8881,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"type":"ss","name":"|荷兰@Yzcloud★73","server":"213.183.59.190","port":9018,"cipher":"aes-256-cfb","password":"fG2artUmHfNT2cX7"}
+  - {"type":"ss","name":"|日本@Yzcloud★85","server":"85.208.108.59","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
+  - {"type":"ss","name":"|荷兰@Yzcloud★21","server":"213.183.59.218","port":9040,"cipher":"aes-256-cfb","password":"p9z5BVADH2YFs3MN"}
+  - {"type":"ss","name":"|美国@Yzcloud★56","server":"38.68.134.85","port":8118,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
+  - {"type":"ss","name":"|美国@Yzcloud★78","server":"38.114.114.19","port":2375,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"|美国@Yzcloud★61","server":"38.91.102.30","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
+  - {"type":"ss","name":"|荷兰@Yzcloud★77","server":"213.183.51.172","port":9088,"cipher":"aes-256-cfb","password":"f8npKgNzdkss2ytn"}
+  - {"type":"ss","name":"|日本@Yzcloud★48","server":"85.208.108.18","port":2376,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"|立陶宛@Yzcloud★24","server":"213.183.63.221","port":9057,"cipher":"aes-256-cfb","password":"wjTugX3ZtHMB9c3Z"}
+  - {"type":"ss","name":"|美国@Yzcloud★79","server":"38.68.135.19","port":5003,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"ss","name":"|立陶宛@Yzcloud★72","server":"213.183.53.214","port":9020,"cipher":"aes-256-cfb","password":"BNmAXXxAHYpTRdzu"}
+  - {"type":"ss","name":"|荷兰@Yzcloud★66","server":"213.183.59.177","port":9057,"cipher":"aes-256-cfb","password":"wjTugX3ZtHMB9c3Z"}
+  - {"type":"ss","name":"|日本@Yzcloud★42","server":"85.208.108.21","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"vmess","name":"|美国@Yzcloud★82","ws-opts":{"path":"/je5x3pBN1vez3NQudNkB","headers":{"host":"us-lax-ctg-01-v2.cdn.savoy.click"}},"server":"us-lax-ctg-01-v2.cdn.savoy.click","port":"888","uuid":"b536533e-6fa0-4575-a1f8-bbf81a194f44","alterId":"0","cipher":"auto","network":"ws","tls":true}
