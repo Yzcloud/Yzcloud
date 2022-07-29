@@ -1,0 +1,234 @@
+#
+#-------------------------------------------------------------#
+## TG频道:Yzcloud免费VPN节点机场订阅 🅥
+## 欢迎关注-->https://t.me/Yzcloud
+## 本配置参考各大佬资料修改
+## 感谢各位大佬的无私分享
+## SUBSCRIBE-MANAGER VERSION: 1.0.0
+#-------------------------------------------------------------#
+#
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxies:
+proxy-groups:
+  - name: 🔵 影子白嫖
+    type: select
+    proxies:
+      - 🟢 自动选择
+      - 🟡 故障转移
+      - 🟣 负载均衡
+      - DIRECT
+    use:
+      - Yzcloud
+      - YzTemporary
+      #- local # 开启本地配置导入取消注释该行
+  - name: 🟢 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+    use:
+      - Yzcloud
+      - YzTemporary
+      #- local # 开启本地配置导入取消注释该行
+  - name: 🟡 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+    use:
+      - Yzcloud
+      - YzTemporary
+      #- local # 开启本地配置导入取消注释该行
+  - name: 🟣 负载均衡
+    proxies:
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    use:
+      - Yzcloud
+      - YzTemporary
+      #- local # 开启本地配置导入取消注释该行
+      
+# 节点配置文件统一存放在 ./profiles/YzcloudClash/ 目录中
+# 多个配置文件请参照71行-80行添加修改 
+# [proxy-groups]下[use]需添加对应代理名 如：YzTemporary
+proxy-providers:
+# 从链接导入的配置文件（支持多个Clash 订阅链接）
+ Yzcloud:
+   type: http
+   path: YzcloudClash/Yzcloud.yaml
+   url: https://tt.vg/vpn
+   interval: 3600 
+   filter:  #'Hong Kong' # 删选出含有该关键词的节点
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 300
+ 
+ YzTemporary:
+   type: http
+   path: YzcloudClash/YzTemporary.yaml
+   url: https://tt.vg/svip
+   interval: 3600 
+   filter:  #'Hong Kong' # 删选出含有该关键词的节点
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 300    
+
+ # 从本地导入的 clash 配置文件
+ # 需建立YzcloudClash/local.yaml文件 本地配置文件名改为-->local
+ # 右击当前配置文件-->打开所在文件夹-->新建YzcloudClash文件夹
+ local:
+   type: file
+   path: ./profiles/YzcloudClash/local.yaml
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 600  
+
+# clash-rules项目提供的规则集
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./profiles/rules/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: ./profiles/rules/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./profiles/rules/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./profiles/rules/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./profiles/rules/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./profiles/rules/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./profiles/rules/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./profiles/rules/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt"
+    path: ./profiles/rules/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./profiles/rules/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./profiles/rules/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./profiles/rules/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./profiles/rules/lancidr.yaml
+    interval: 86400
+# 分流规则
+rules:
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,xray,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,trojan,DIRECT
+  - PROCESS-NAME,trojan-go,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,leaf,DIRECT
+  - PROCESS-NAME,v2ray.exe,DIRECT
+  - PROCESS-NAME,xray.exe,DIRECT
+  - PROCESS-NAME,naive.exe,DIRECT
+  - PROCESS-NAME,trojan.exe,DIRECT
+  - PROCESS-NAME,trojan-go.exe,DIRECT
+  - PROCESS-NAME,ss-local.exe,DIRECT
+  - PROCESS-NAME,privoxy.exe,DIRECT
+  - PROCESS-NAME,leaf.exe,DIRECT
+  - PROCESS-NAME,Surge,DIRECT
+  - PROCESS-NAME,Surge 2,DIRECT
+  - PROCESS-NAME,Surge 3,DIRECT
+  - PROCESS-NAME,Surge 4,DIRECT
+  - PROCESS-NAME,Surge%202,DIRECT
+  - PROCESS-NAME,Surge%203,DIRECT
+  - PROCESS-NAME,Surge%204,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - PROCESS-NAME,aria2c.exe,DIRECT
+  - PROCESS-NAME,BitComet.exe,DIRECT
+  - PROCESS-NAME,fdm.exe,DIRECT
+  - PROCESS-NAME,NetTransport.exe,DIRECT
+  - PROCESS-NAME,qbittorrent.exe,DIRECT
+  - PROCESS-NAME,Thunder.exe,DIRECT
+  - PROCESS-NAME,ThunderVIP.exe,DIRECT
+  - PROCESS-NAME,transmission-daemon.exe,DIRECT
+  - PROCESS-NAME,transmission-qt.exe,DIRECT
+  - PROCESS-NAME,uTorrent.exe,DIRECT
+  - PROCESS-NAME,WebTorrent.exe,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,REJECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,proxy,🔵 影子白嫖
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,telegramcidr,🔵 影子白嫖
+  - GEOIP,,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,🔵 影子白嫖
