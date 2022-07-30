@@ -76,7 +76,7 @@ proxy-groups:
       - DIRECT
     use:
       - Yzcloud
-  #    - YzTemporary #示例 添加多个订阅 自行取消注释
+  #    - Yztest #示例 添加多个订阅 自行取消注释
   #    - local # 开启本地配置导入请取消注释本行
   - name: 🟢 自动选择
     type: url-test
@@ -85,7 +85,7 @@ proxy-groups:
     proxies:
     use:
       - Yzcloud
-  #    - YzTemporary #示例 添加多个订阅 自行取消注释
+  #    - Yztest #示例 添加多个订阅 自行取消注释
   #    - local # 开启本地配置导入请取消注释本行
   - name: 🟡 故障转移
     type: fallback
@@ -94,7 +94,7 @@ proxy-groups:
     proxies:
     use:
       - Yzcloud
-  #    - YzTemporary #示例 添加多个订阅 自行取消注释
+  #    - Yztest #示例 添加多个订阅 自行取消注释
   #    - local # 开启本地配置导入请取消注释本行
   - name: 🔴 广告拦截
     type: select
@@ -121,7 +121,7 @@ proxy-groups:
     interval: 600
     use:
       - Yzcloud
-  #    - YzTemporary #示例 添加多个订阅 自行取消注释
+  #    - Yztest #示例 添加多个订阅 自行取消注释
   #    - local # 开启本地配置导入请取消注释本行      
 #
 #-----------------------------------------------------#
@@ -149,10 +149,10 @@ proxy-providers:
 # [proxy-groups]下[use]需添加对应代理名 如：YzTemporary 
 # 添加食用多订阅请自行取消注释
 # 多订阅链接请参考以下10行添加修改食用 
-# YzTemporary:
+# Yztest:
 #   type: http
-#   path: ./profiles/YzcloudClash/YzTemporary.yaml
-#   url: https://***  # Clash订阅链接
+#   path: ./profiles/YzcloudClash/Yztest.yaml
+#   url: https://test**  # Clash订阅链接
 #   interval: 3600 
 #   filter:  #'香港|**' # 删选出含有该关键词的节点
 #   health-check:
