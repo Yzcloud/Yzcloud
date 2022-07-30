@@ -137,7 +137,7 @@ proxy-providers:
    path: ./profiles/YzcloudClash/Yzcloud.yaml
    url: https://tt.vg/vpn  # Clash订阅链接
    interval: 3600 
-   filter:  #'Hong Kong' # 删选出含有该关键词的节点
+   filter:  #'香港|**' # 删选出含有该关键词的节点
    health-check:
      enable: true
      url: http://www.gstatic.com/generate_204
@@ -151,9 +151,9 @@ proxy-providers:
 # YzTemporary:
 #   type: http
 #   path: ./profiles/YzcloudClash/YzTemporary.yaml
-#   url: https://tt.vg/svip  # Clash订阅链接
+#   url: https://***  # Clash订阅链接
 #   interval: 3600 
-#   filter:  #'Hong Kong' # 删选出含有该关键词的节点
+#   filter:  #'香港|**' # 删选出含有该关键词的节点
 #   health-check:
 #     enable: true
 #     url: http://www.gstatic.com/generate_204
