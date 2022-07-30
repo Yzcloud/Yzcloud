@@ -44,5 +44,3 @@ proxies:
   - {"type":"ss","name":"🇨🇳|中国|@Yzcloud★33","server":"14.29.124.168","port":25272,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
   - {"type":"ss","name":"🇨🇳|中国|@Yzcloud★34","server":"14.29.124.168","port":25267,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
   - {"type":"ss","name":"🇨🇳|中国|@Yzcloud★35","server":"14.29.124.168","port":25295,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
-  - {"type":"ss","name":"🇨🇳|中国|@Yzcloud★36","server":"14.29.124.168","port":25245,"cipher":"aes-128-cfb","password":"QazEdcTgb159@$*"}
-  - {"type":"vmess","name":"🇷🇺|俄罗斯联邦|@Yzcloud★37","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"d76bb35696.laowanxiang.com"}},"server":"45.8.230.253","port":"852","uuid":"0f38f32e-01aa-4c67-9c27-0eadb9068329","alterId":"0","cipher":"auto","network":"ws"}
