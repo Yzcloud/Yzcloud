@@ -149,16 +149,16 @@ proxy-providers:
 # [proxy-groups]下[use]需添加对应代理名 如：YzTemporary 
 # 添加食用多订阅请自行取消注释
 # 多订阅链接请参考以下10行添加修改食用 
- YzTemporary:
-   type: http
-   path: ./profiles/YzcloudClash/YzTemporary.yaml
-   url: https://***  # Clash订阅链接
-   interval: 3600 
-   filter:  #'香港|**' # 删选出含有该关键词的节点
-   health-check:
-     enable: true
-     url: http://www.gstatic.com/generate_204
-     interval: 300  
+# YzTemporary:
+#   type: http
+#   path: ./profiles/YzcloudClash/YzTemporary.yaml
+#   url: https://***  # Clash订阅链接
+#   interval: 3600 
+#   filter:  #'香港|**' # 删选出含有该关键词的节点
+#   health-check:
+#     enable: true
+#     url: http://www.gstatic.com/generate_204
+#     interval: 300  
 #
 #-----------------------------------------------------#
 # 从本地导入的 clash 配置文件
