@@ -2,45 +2,47 @@
 #-------------------------------------------------------------#
 ## TG频道:Yzcloud免费VPN节点机场订阅 🅥
 ## 欢迎关注-->https://t.me/Yzcloud
-## 创建时间：2022-08-02 15:35:14
-## 节点数量：36
+## 创建时间：2022-08-02 22:04:16
+## 节点数量：38
 ## SUBSCRIBE-MANAGER VERSION: 1.0.2
 #-------------------------------------------------------------#
 #
 proxies:
-  - {"type":"ss","name":"🇭🇰香港@Yzcloud★1","server":"media.v2gyy.top","port":62007,"cipher":"chacha20-ietf-poly1305","password":"e2892d66-7e9f-4e4b-93f1-0e488f406adf"}
-  - {"type":"vmess","name":"🇯🇵日本@Yzcloud★2","server":"hncu.qq.gbnodex.com","port":"18000","uuid":"bb26aee4-5f72-4996-8ade-3f883f93d4df","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"🇭🇰香港@Yzcloud★3","server":"media.v2gyy.top","port":62001,"cipher":"chacha20-ietf-poly1305","password":"e2892d66-7e9f-4e4b-93f1-0e488f406adf"}
-  - {"type":"ss","name":"🇭🇰香港@Yzcloud★4","server":"media.v2gyy.top","port":62008,"cipher":"chacha20-ietf-poly1305","password":"e2892d66-7e9f-4e4b-93f1-0e488f406adf"}
-  - {"type":"ss","name":"🇸🇬新加坡@Yzcloud★5","server":"14.119.87.189","port":45144,"cipher":"chacha20-ietf-poly1305","password":"2338203e-7b1a-4e03-8684-31075b9eb66c"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★6","server":"38.114.114.19","port":6679,"cipher":"aes-256-gcm","password":"TEzjfAYq2IjtuoS"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★7","server":"38.114.114.69","port":9101,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★8","server":"38.114.114.19","port":5500,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
-  - {"type":"vmess","name":"🇺🇸美国@Yzcloud★9","ws-opts":{"path":"/fdsfa","headers":{"host":"216.24.248.104"}},"server":"216.24.248.104","port":"29862","uuid":"281f345f-da96-485b-9aa3-4bc530f2ffa2","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★10","server":"38.68.135.19","port":8119,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★11","server":"38.75.136.21","port":5001,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
-  - {"type":"ss","name":"🇭🇰香港@Yzcloud★12","server":"hk.v2gyy.top","port":26001,"cipher":"chacha20-ietf-poly1305","password":"e2892d66-7e9f-4e4b-93f1-0e488f406adf"}
-  - {"type":"ss","name":"🇫🇷法国@Yzcloud★13","server":"51.195.136.209","port":50004,"cipher":"aes-256-cfb","password":"4415934295"}
-  - {"type":"ss","name":"🇯🇵日本@Yzcloud★14","server":"89.31.125.254","port":808,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
-  - {"type":"ss","name":"🇯🇵日本@Yzcloud★15","server":"89.31.125.254","port":811,"cipher":"chacha20-ietf-poly1305","password":"G!yBwPWH3Vao"}
-  - {"type":"ss","name":"🇵🇭菲律宾@Yzcloud★16","server":"14.119.87.189","port":25019,"cipher":"chacha20-ietf-poly1305","password":"2338203e-7b1a-4e03-8684-31075b9eb66c"}
-  - {"type":"ss","name":"🇯🇵日本@Yzcloud★17","server":"13.124.29.75","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★18","server":"38.91.102.30","port":5000,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★19","server":"38.75.136.135","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★20","server":"38.75.136.135","port":7002,"cipher":"aes-256-gcm","password":"RexnBgU7EV5ADxG"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★21","server":"38.64.138.145","port":8000,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★22","server":"38.107.226.49","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
-  - {"type":"vmess","name":"🇺🇸美国@Yzcloud★23","server":"198.148.116.134","port":"52015","uuid":"086e9fd4-1d86-49f0-fdab-a58822a36b29","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"🇺🇸美国@Yzcloud★24","server":"38.75.136.102","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"trojan","name":"🇭🇰香港@Yzcloud★1","server":"730hk003.ok365.cyou","port":443,"password":"93f33c10-57df-4a37-8c2e-b9d60bd44788","udp":true,"skip-cert-verify":true,"sni":"730hk003.ok365.cyou"}
+  - {"type":"trojan","name":"🇹🇼台湾@Yzcloud★2","server":"hinet.52147.top","port":443,"password":"96d2badf-4ef7-41a9-be8b-19bb09468d28","udp":true,"skip-cert-verify":true,"sni":"download.windowsupdate1.com"}
+  - {"type":"trojan","name":"🇹🇼台湾@Yzcloud★3","server":"730tw01.ok365.cyou","port":443,"password":"93f33c10-57df-4a37-8c2e-b9d60bd44788","udp":true,"skip-cert-verify":true,"sni":"730tw01.ok365.cyou"}
+  - {"type":"trojan","name":"🇹🇼台湾@Yzcloud★4","server":"727tw01.ok365.cyou","port":443,"password":"93f33c10-57df-4a37-8c2e-b9d60bd44788","udp":true,"skip-cert-verify":true,"sni":"727tw01.ok365.cyou"}
+  - {"type":"trojan","name":"🇯🇵日本@Yzcloud★5","server":"trs02.bolab.net","port":443,"password":"6990ca1bdccb0de3d9a0c5640634e29c","udp":true,"skip-cert-verify":true,"sni":"trs02.bolab.net"}
+  - {"type":"ss","name":"🇭🇰香港@Yzcloud★6","server":"cm-1.autonode.me","port":16104,"cipher":"chacha20-ietf-poly1305","password":"4de1d528-a071-4963-b178-d56ff181e556"}
+  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★7","ws-opts":{"path":"/ba873aa/"},"server":"152.70.254.73","port":443,"uuid":"5c20f43f-afe2-4624-825c-d08abcfaf652","alterId":0,"cipher":"auto","network":"ws","tls":true}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★8","server":"167.88.61.213","port":5003,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★9","server":"38.114.114.49","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★10","server":"167.88.61.50","port":8119,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★11","server":"85.208.108.58","port":8888,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★12","server":"167.88.61.213","port":8118,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★13","server":"38.91.102.30","port":3389,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★14","server":"85.208.108.60","port":8882,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★15","server":"38.86.135.36","port":8882,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"type":"trojan","name":"🇭🇰香港@Yzcloud★16","server":"gzn1.bdpyyds.top","port":20231,"password":"99291396-3fee-3156-ae1d-caf41676d337","udp":true,"skip-cert-verify":true,"sni":"gzn1.bdpyyds.top"}
+  - {"type":"trojan","name":"🇸🇬新加坡@Yzcloud★17","server":"gzydv2.bdpyyds.top","port":28021,"password":"99291396-3fee-3156-ae1d-caf41676d337","udp":true,"skip-cert-verify":true,"sni":"gzydv2.bdpyyds.top"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★18","server":"167.88.61.213","port":7307,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★19","server":"38.68.135.18","port":8009,"cipher":"aes-256-gcm","password":"XKFKl2rULjIp74"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★20","server":"38.75.136.21","port":6379,"cipher":"aes-256-gcm","password":"zDNVedRFPQexG9v"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★21","server":"38.114.114.69","port":9101,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★22","server":"38.114.114.19","port":5500,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★23","server":"38.91.102.30","port":5000,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★24","server":"38.75.136.135","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
   - {"type":"ss","name":"🇺🇸美国@Yzcloud★25","server":"38.86.135.27","port":8091,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
-  - {"type":"vmess","name":"🇹🇼台湾@Yzcloud★26","ws-opts":{"path":"/rocket","headers":{"host":"cn03.downloadmovie.cn"}},"server":"cn03.downloadmovie.cn","port":"65041","uuid":"0253b574-8020-3186-a647-0267295ac9bb","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"ss","name":"🇫🇷法国@Yzcloud★27","server":"51.195.136.209","port":50004,"cipher":"aes-256-cfb","password":"4415934295"}
-  - {"type":"vmess","name":"🇸🇬新加坡@Yzcloud★28","ws-opts":{"path":"/","headers":{"host":"18.142.180.184"}},"server":"18.142.180.184","port":"80","uuid":"9341cd63-f637-410b-a169-b5a1ef11c0ec","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"🇹🇼台湾@Yzcloud★29","ws-opts":{"path":"/rocket","headers":{"host":"116.129.254.177"}},"server":"116.129.254.177","port":"65035","uuid":"0253b574-8020-3186-a647-0267295ac9bb","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"trojan","name":"🇺🇸美国@Yzcloud★30","server":"pp1.zhengzhongfeizhu.xyz","port":33002,"password":"eb2f8154-ff58-3b99-b393-28c8eecdbe64","udp":true,"skip-cert-verify":true}
-  - {"type":"trojan","name":"🇭🇰香港@Yzcloud★31","server":"pp1.zhengzhongfeizhu.xyz","port":34003,"password":"177501cc-f0c2-3cc3-b9a7-8c1e8e27655f","udp":true,"skip-cert-verify":true,"sni":"pp1.zhengzhongfeizhu.xyz"}
-  - {"type":"vmess","name":"🇺🇸美国@Yzcloud★32","ws-opts":{"path":"/path/120306182525","headers":{"host":"www.67271513.xyz"}},"server":"142.0.128.250","port":"443","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":"64","cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"🇺🇸美国@Yzcloud★33","ws-opts":{"path":"/path/120306182525","headers":{"host":"www.67271513.xyz"}},"server":"142.0.128.249","port":"443","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":"64","cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"🇺🇸美国@Yzcloud★34","ws-opts":{"path":"/path/120306182525","headers":{"host":"www.61719864.xyz"}},"server":"142.4.112.60","port":"443","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":"64","cipher":"auto","network":"ws","tls":true}
+  - {"type":"trojan","name":"🇭🇰香港@Yzcloud★26","server":"pp1.zhengzhongfeizhu.xyz","port":34003,"password":"177501cc-f0c2-3cc3-b9a7-8c1e8e27655f","udp":true,"skip-cert-verify":true,"sni":"pp1.zhengzhongfeizhu.xyz"}
+  - {"type":"trojan","name":"🇹🇼台湾@Yzcloud★27","server":"730tw01.ok365.cyou","port":443,"password":"96436d4c-bb86-4c6e-afa0-1ab333280365","udp":true,"skip-cert-verify":true,"sni":"730tw01.ok365.cyou"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★28","server":"38.107.226.49","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★29","server":"38.68.134.85","port":8118,"cipher":"aes-256-gcm","password":"cdBIDV42DCwnfIN"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★30","server":"167.88.61.50","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★31","server":"38.68.135.18","port":5500,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★32","server":"167.88.63.79","port":8881,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"type":"ss","name":"🇺🇸美国@Yzcloud★33","server":"38.68.134.85","port":5600,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇫🇷法国@Yzcloud★34","server":"51.195.136.209","port":50004,"cipher":"aes-256-cfb","password":"4415934295"}
+  - {"type":"vmess","name":"🇸🇬新加坡@Yzcloud★35","ws-opts":{"path":"/","headers":{"host":"18.142.180.184"}},"server":"18.142.180.184","port":"80","uuid":"9341cd63-f637-410b-a169-b5a1ef11c0ec","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"ss","name":"🇸🇬新加坡@Yzcloud★36","server":"n24.emovpn.xyz","port":1275,"cipher":"chacha20-ietf-poly1305","password":"ddd420d6-a1c5-445f-aa13-1ac9c3f7827b"}
   - {"type":"trojan","name":"🇺🇸美国@Yzcloud★v1","server":"s1.hazz.win","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","udp":true,"skip-cert-verify":true,"sni":"static.dingtalk.com"}
   - {"type":"trojan","name":"🇺🇸美国@Yzcloud★v2","server":"s2.hazz.win","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","udp":true,"skip-cert-verify":true,"sni":"static.dingtalk.com"}
