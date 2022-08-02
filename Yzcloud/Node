@@ -3,7 +3,7 @@
 ## TG频道:Yzcloud免费VPN节点机场订阅 🅥
 ## 欢迎关注-->https://t.me/Yzcloud
 ## 创建时间：2022-08-03 02:56:28
-## 节点数量：31
+## 节点数量：36
 ## SUBSCRIBE-MANAGER VERSION: 1.0.2
 #-------------------------------------------------------------#
 #
@@ -37,5 +37,10 @@ proxies:
   - {"type":"trojan","name":"🇹🇼台湾@Yzcloud★27","server":"730tw01.ok365.cyou","port":443,"password":"96436d4c-bb86-4c6e-afa0-1ab333280365","udp":true,"skip-cert-verify":true,"sni":"730tw01.ok365.cyou"}
   - {"type":"vmess","name":"🇸🇬新加坡@Yzcloud★28","ws-opts":{"path":"/","headers":{"host":"18.142.180.184"}},"server":"18.142.180.184","port":"80","uuid":"9341cd63-f637-410b-a169-b5a1ef11c0ec","alterId":"0","cipher":"auto","network":"ws"}
   - {"type":"ss","name":"🇸🇬新加坡@Yzcloud★29","server":"n24.emovpn.xyz","port":1275,"cipher":"chacha20-ietf-poly1305","password":"ddd420d6-a1c5-445f-aa13-1ac9c3f7827b"}
+  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★30","server":"hk05.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★31","server":"hk10.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★32","server":"hk14.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★33","server":"hk16.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★34","server":"hk17.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}  
   - {"type":"trojan","name":"🇺🇸美国@Yzcloud★v1","server":"s1.hazz.win","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","udp":true,"skip-cert-verify":true,"sni":"static.dingtalk.com"}
   - {"type":"trojan","name":"🇺🇸美国@Yzcloud★v2","server":"s2.hazz.win","port":12340,"password":"dfbf0d67-f03d-4184-a224-c2d64a571f99","udp":true,"skip-cert-verify":true,"sni":"static.dingtalk.com"}
