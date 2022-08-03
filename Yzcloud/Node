@@ -9,7 +9,7 @@
 #
 proxies:
   - {"type":"ss","name":"群友说这个傻逼太操他妈_1","server":"ersgdf.passwordv2.com","port":7401,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-4a873d03c7df"}
-  - {"type":"ss","name":"🇺🇸美国@flying110操你妈_1","server":"lsdrtx.passwordv2.com","port":7502,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-4a873d03c7df"}
+  - {"type":"ss","name":"群友说这个傻逼太操他妈_1","server":"lsdrtx.passwordv2.com","port":7502,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-4a873d03c7df"}
   - {"type":"ss","name":"🇸🇬新加坡@flying110操你妈_2","server":"esdde.passwordv2.com","port":7406,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-4a873d03c7df"}
   - {"type":"ss","name":"🇸🇬新加坡@flying110操你妈_3","server":"esdde.passwordv2.com","port":7403,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-4a873d03c7df"}
   - {"type":"trojan","name":"🇯🇵日本@flying110操你妈_1","server":"trs02.bolab.net","port":443,"password":"6990ca1bdccb0de3d9a0c5640634e29c","udp":true,"skip-cert-verify":true,"sni":"trs02.bolab.net"}
@@ -23,7 +23,7 @@ proxies:
   - {"type":"ss","name":"🇭🇰香港@flying110操你妈_4","server":"yd-01.paofunlink.com","port":5982,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
   - {"type":"ss","name":"🇭🇰香港@flying110操你妈_5","server":"yd-01.paofunlink.com","port":5988,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
   - {"type":"ss","name":"🇸🇬新加坡@flying110操你妈_5","server":"yd-02.paofunlink.com","port":1193,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
-  - {"type":"ss","name":"🇭🇰香港@flying110操你妈_6","server":"yd-04.paofunlink.com","port":5985,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
+  - {"type":"ss","name":"群友说这个傻逼太操他妈_6","server":"yd-04.paofunlink.com","port":5985,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
   - {"type":"ss","name":"🇭🇰香港@flying110操你妈_7","server":"yd-04.paofunlink.com","port":5982,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
   - {"type":"ss","name":"🇭🇰香港@flying110操你妈_8","server":"yd-01.paofunlink.com","port":5983,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
   - {"type":"ss","name":"🇸🇬新加坡@flying110操你妈_6","server":"yd-02.paofunlink.com","port":1191,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
@@ -36,8 +36,8 @@ proxies:
   - {"type":"vmess","name":"🇺🇸美国@flying110操你妈_2","server":"hncu.qq.gbnodex.com","port":"19079","uuid":"bb26aee4-5f72-4996-8ade-3f883f93d4df","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"trojan","name":"🇭🇰香港@flying110操你妈_14","server":"hlu.bgp2.liuliangzhuanfa.xyz","port":45379,"password":"48a4133a-250c-4637-a37e-3bb093392f8d","udp":true,"skip-cert-verify":true,"sni":"xg1.xianggang1.xyz"}
   - {"type":"trojan","name":"🇰🇷韩国@flying110操你妈_3","server":"az.az-bgp.chuangshi999.xyz","port":39124,"password":"48a4133a-250c-4637-a37e-3bb093392f8d","udp":true,"skip-cert-verify":true,"sni":"hg1.hanguo1.xyz"}
-  - {"type":"ss","name":"🇭🇰香港@flying110操你妈_15","server":"yd-04.paofunlink.com","port":5986,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
-  - {"type":"trojan","name":"🇺🇸美国@flying110操你妈_3","server":"fhcamd2.gaox.ml","port":443,"password":"dbf9bf9c-2c3f-474a-8031-d4c00666a989","udp":true,"skip-cert-verify":true}
+  - {"type":"ss","name":"🇭群友说这个傻逼太操他妈_15","server":"yd-04.paofunlink.com","port":5986,"cipher":"rc4-md5","password":"Paofu","plugin":"obfs","plugin-opts":{"mode":"http","host":"ce568107841.microsoft.com"}}
+  - {"type":"trojan","name":"群友说这个傻逼太操他妈_3","server":"fhcamd2.gaox.ml","port":443,"password":"dbf9bf9c-2c3f-474a-8031-d4c00666a989","udp":true,"skip-cert-verify":true}
   - {"type":"vmess","name":"🇺🇸美国@flying110操你妈_4","ws-opts":{"path":"/","headers":{"host":"haxeu2.zikkcc.ga"}},"server":"172.64.154.152","port":"443","uuid":"4f23a4ef-45cf-4ded-abed-782e3cf29957","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"ss","name":"🇯🇵日本@flying110操你妈_2","server":"85.208.108.91","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
   - {"type":"vmess","name":"🇯🇵日本@flying110操你妈_3","server":"138.2.25.235","port":"54421","uuid":"b3f4d3da-059a-43cd-90e6-023a49757ec6","alterId":"0","cipher":"auto","network":"tcp"}
@@ -45,7 +45,7 @@ proxies:
   - {"type":"ss","name":"🇯🇵日本@flying110操你妈_4","server":"85.208.108.91","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
   - {"type":"vmess","name":"🇺🇸美国@flying110操你妈_5","server":"138.2.25.235","port":"54421","uuid":"b3f4d3da-059a-43cd-90e6-023a49757ec6","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"🇰🇷韩国@flying110操你妈_4","server":"146.56.161.42","port":"27926","uuid":"21ae8edc-eaa0-4155-f988-f80fecf22d80","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"🇯🇵日本@flying110操你妈_5","ws-opts":{"path":"/","headers":{"host":"168.138.193.140"}},"server":"168.138.193.140","port":"10562","uuid":"02140cf3-8470-4b3d-e4a8-8d40fc2f7867","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"群友说这个傻逼太操他妈_5","ws-opts":{"path":"/","headers":{"host":"168.138.193.140"}},"server":"168.138.193.140","port":"10562","uuid":"02140cf3-8470-4b3d-e4a8-8d40fc2f7867","alterId":"0","cipher":"auto","network":"ws"}
   - {"type":"ss","name":"🇯🇵日本@flying110操你妈_6","server":"85.208.108.91","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
   - {"type":"ss","name":"🇸🇬新加坡@flying110操你妈_8","server":"ersgdf.passwordv2.com","port":7401,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-4a873d03c7df"}
   - {"type":"ss","name":"🇸🇬新加坡@flying110操你妈_9","server":"ersgdf.passwordv2.com","port":7402,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-4a873d03c7df"}
