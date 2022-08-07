@@ -6,7 +6,7 @@
 ## 节点数量：40
 ## SUBSCRIBE-MANAGER VERSION: 1.0.2
 #-------------------------------------------------------------#
-#erver":"esdde.passwordv2.com","port":7403,"cipher":"aes-128-gcm","password":"d19cce26-f592-43a5-bba1-
+#
 
 proxies:
   - {"type":"trojan","name":"🇭🇰香港@Yzcloud★31","server":"pp1.zhengzhongfeizhu.xyz","port":34003,"password":"177501cc-f0c2-3cc3-b9a7-8c1e8e27655f","udp":true,"skip-cert-verify":true,"sni":"pp1.zhengzhongfeizhu.xyz"}
