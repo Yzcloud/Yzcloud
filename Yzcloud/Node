@@ -10,15 +10,6 @@
 
 proxies:
   - {"type":"trojan","name":"🇭🇰香港@Shadow_Cloud★27","server":"pp1.zhengzhongfeizhu.xyz","port":34003,"password":"177501cc-f0c2-3cc3-b9a7-8c1e8e27655f","udp":true,"skip-cert-verify":true,"sni":"pp1.zhengzhongfeizhu.xyz"}
-  - {"type":"ss","name":"🇸🇬新加坡@Shadow_Cloud★28","server":"n24.emovpn.xyz","port":1275,"cipher":"chacha20-ietf-poly1305","password":"ddd420d6-a1c5-445f-aa13-1ac9c3f7827b"}
-  - {"type":"vmess","name":"🇰🇷韩国@Shadow_Cloud★29","server":"hk05.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"🇰🇷韩国@Shadow_Cloud★30","server":"hk10.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"ss","name":"🇸🇬新加坡@Shadow_Cloud★31","server":"18.141.207.171","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
-  - {"type":"ss","name":"🇯🇵日本@Shadow_Cloud★32","server":"85.208.108.91","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
-  - {"type":"ss","name":"🇯🇵日本@Shadow_Cloud★33","server":"85.208.108.91","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
-  - {"type":"vmess","name":"🇰🇷韩国@Shadow_Cloud★34","server":"146.56.161.42","port":"27926","uuid":"21ae8edc-eaa0-4155-f988-f80fecf22d80","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"🇯🇵日本@Shadow_Cloud★35","server":"85.208.108.91","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
-  - {"type":"trojan","name":"🇺🇸美国@Shadow_Cloud★36","server":"fhcamd2.gaox.ml","port":443,"password":"dbf9bf9c-2c3f-474a-8031-d4c00666a989","udp":true,"skip-cert-verify":true}
   - {"type":"vmess","name":"🇹🇼台湾@Shadow_Cloud★1","ws-opts":{"path":"/v2ray","headers":{"host":"nh-hinet01.xiaohouzi.club"}},"server":"nh-hinet01.xiaohouzi.club","port":"1558","uuid":"6dc17fdb-9bcd-3231-ad6a-6af308aef4cc","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"🇹🇼台湾@Shadow_Cloud★2","ws-opts":{"path":"/live","headers":{"host":"cctv.com"}},"server":"tw02.henet.cyou","port":"20000","uuid":"d4e21056-d793-4eeb-b3b0-d7751db49d89","alterId":"0","cipher":"auto","network":"ws"}
   - {"type":"trojan","name":"🇸🇬新加坡@Shadow_Cloud★3","server":"az.az-bgp.chuangshi999.xyz","port":30484,"password":"64df808e-9fd3-4eb0-afe8-7a800984d321","udp":true,"skip-cert-verify":true,"sni":"xjp1.xinjiapo1.xyz"}
