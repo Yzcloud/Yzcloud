@@ -1,21 +1,47 @@
 #
 #-------------------------------------------------------------#
 ## TG频道:Yzcloud免费VPN节点机场订阅 🅥
-## 欢迎关注-->https://t.me/Yzcloud
-## 创建时间：2022-08-04 15:52:44
-## 节点数量：40
+## 欢迎关注-->https://t.me/Shadow_Cloud
+## 创建时间：2022-08-09 01:52:05
+## 节点数量：36
 ## SUBSCRIBE-MANAGER VERSION: 1.0.2
 #-------------------------------------------------------------#
 #
 
 proxies:
-  - {"type":"trojan","name":"🇭🇰香港@Yzcloud★31","server":"pp1.zhengzhongfeizhu.xyz","port":34003,"password":"177501cc-f0c2-3cc3-b9a7-8c1e8e27655f","udp":true,"skip-cert-verify":true,"sni":"pp1.zhengzhongfeizhu.xyz"}
-  - {"type":"ss","name":"🇸🇬新加坡@Yzcloud★32","server":"n24.emovpn.xyz","port":1275,"cipher":"chacha20-ietf-poly1305","password":"ddd420d6-a1c5-445f-aa13-1ac9c3f7827b"}
-  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★33","server":"hk05.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★34","server":"hk10.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"ss","name":"🇸🇬新加坡@Yzcloud★35","server":"18.141.207.171","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
-  - {"type":"ss","name":"🇯🇵日本@Yzcloud★36","server":"85.208.108.91","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
-  - {"type":"ss","name":"🇯🇵日本@Yzcloud★37","server":"85.208.108.91","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
-  - {"type":"vmess","name":"🇰🇷韩国@Yzcloud★38","server":"146.56.161.42","port":"27926","uuid":"21ae8edc-eaa0-4155-f988-f80fecf22d80","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"🇯🇵日本@Yzcloud★39","server":"85.208.108.91","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
-  - {"type":"trojan","name":"🇺🇸美国@Yzcloud★40","server":"fhcamd2.gaox.ml","port":443,"password":"dbf9bf9c-2c3f-474a-8031-d4c00666a989","udp":true,"skip-cert-verify":true}
+  - {"type":"trojan","name":"🇭🇰香港@Shadow_Cloud★27","server":"pp1.zhengzhongfeizhu.xyz","port":34003,"password":"177501cc-f0c2-3cc3-b9a7-8c1e8e27655f","udp":true,"skip-cert-verify":true,"sni":"pp1.zhengzhongfeizhu.xyz"}
+  - {"type":"ss","name":"🇸🇬新加坡@Shadow_Cloud★28","server":"n24.emovpn.xyz","port":1275,"cipher":"chacha20-ietf-poly1305","password":"ddd420d6-a1c5-445f-aa13-1ac9c3f7827b"}
+  - {"type":"vmess","name":"🇰🇷韩国@Shadow_Cloud★29","server":"hk05.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇰🇷韩国@Shadow_Cloud★30","server":"hk10.bp777.buzz","port":"21665","uuid":"8ba2c11e-edff-46d5-9ca8-3ef74e7674d1","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"ss","name":"🇸🇬新加坡@Shadow_Cloud★31","server":"18.141.207.171","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
+  - {"type":"ss","name":"🇯🇵日本@Shadow_Cloud★32","server":"85.208.108.91","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
+  - {"type":"ss","name":"🇯🇵日本@Shadow_Cloud★33","server":"85.208.108.91","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"vmess","name":"🇰🇷韩国@Shadow_Cloud★34","server":"146.56.161.42","port":"27926","uuid":"21ae8edc-eaa0-4155-f988-f80fecf22d80","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"🇯🇵日本@Shadow_Cloud★35","server":"85.208.108.91","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"trojan","name":"🇺🇸美国@Shadow_Cloud★36","server":"fhcamd2.gaox.ml","port":443,"password":"dbf9bf9c-2c3f-474a-8031-d4c00666a989","udp":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇹🇼台湾@Shadow_Cloud★1","ws-opts":{"path":"/v2ray","headers":{"host":"nh-hinet01.xiaohouzi.club"}},"server":"nh-hinet01.xiaohouzi.club","port":"1558","uuid":"6dc17fdb-9bcd-3231-ad6a-6af308aef4cc","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇹🇼台湾@Shadow_Cloud★2","ws-opts":{"path":"/live","headers":{"host":"cctv.com"}},"server":"tw02.henet.cyou","port":"20000","uuid":"d4e21056-d793-4eeb-b3b0-d7751db49d89","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"trojan","name":"🇸🇬新加坡@Shadow_Cloud★3","server":"az.az-bgp.chuangshi999.xyz","port":30484,"password":"64df808e-9fd3-4eb0-afe8-7a800984d321","udp":true,"skip-cert-verify":true,"sni":"xjp1.xinjiapo1.xyz"}
+  - {"type":"vmess","name":"🇯🇵日本@Shadow_Cloud★4","server":"138.3.208.203","port":"43298","uuid":"42104b60-1988-4063-96ce-5c4b20b53130","alterId":"0","cipher":"auto","network":"tcp","tls":true}
+  - {"type":"trojan","name":"🇭🇰香港@Shadow_Cloud★5","server":"20.187.95.117","port":8443,"password":"190e2a95-63f0-4a9c-9aef-9f2ec6e542de","udp":true,"skip-cert-verify":true,"sni":"wx.qq.com"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★6","server":"x11.v2.gay","port":"26635","uuid":"74c466dd-b8c7-4a9e-b46b-3a4cc6889ca4","alterId":"0","cipher":"auto","network":"tcp","tls":true}
+  - {"type":"trojan","name":"🇰🇷韩国@Shadow_Cloud★7","server":"az.az-bgp.chuangshi999.xyz","port":39124,"password":"64df808e-9fd3-4eb0-afe8-7a800984d321","udp":true,"skip-cert-verify":true,"sni":"hg1.hanguo1.xyz"}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★8","server":"104.243.30.252","port":246,"cipher":"aes-256-cfb","password":"bwhskrskr03"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★9","server":"23.234.234.206","port":"15860","uuid":"07b0517f-213a-40a7-fab5-3a45f02e3fae","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇷🇺俄罗斯@Shadow_Cloud★10","server":"hlu.bgp2.liuliangzhuanfa.xyz","port":42167,"password":"64df808e-9fd3-4eb0-afe8-7a800984d321","udp":true,"skip-cert-verify":true,"sni":"els1.eluosi1.xyz"}
+  - {"type":"vmess","name":"🇹🇼台湾@Shadow_Cloud★11","ws-opts":{"path":"/hls/cctv5phd.m3u8","headers":{"host":"www.ivpnpro.net"}},"server":"ingress-i1.onebox6.org","port":"38201","uuid":"79386685-16da-327c-9e14-aa6d702d86bc","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★12","server":"c71s3.jamjams3.net","port":"10922","uuid":"633aa237-6edc-4f81-861c-e0667d97f45d","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇺🇸美国@Shadow_Cloud★13","server":"fhcamd2.gaox.ml","port":443,"password":"dbf9bf9c-2c3f-474a-8031-d4c00666a989","udp":true,"skip-cert-verify":true}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★14","server":"198.181.56.163","port":238,"cipher":"aes-256-cfb","password":"bwhskrskr05"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★15","server":"c71s3.jamjams3.net","port":"10922","uuid":"633aa237-6edc-4f81-861c-e0667d97f45d","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"trojan","name":"🇸🇬新加坡@Shadow_Cloud★16","server":"hlu.bgp2.liuliangzhuanfa.xyz","port":26539,"password":"64df808e-9fd3-4eb0-afe8-7a800984d321","udp":true,"skip-cert-verify":true,"sni":"xjp1.xinjiapo1.xyz"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★17","server":"198.200.51.237","port":"51144","uuid":"5a3e68d5-9ee0-4eea-b4c2-436692179924","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★18","server":"172.99.190.61","port":443,"cipher":"aes-256-gcm","password":"pKEW8JPByTVTLtM"}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★19","server":"172.99.190.61","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★20","server":"172.99.190.61","port":5601,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★21","server":"172.99.190.61","port":5500,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★22","server":"198.200.51.237","port":"51144","uuid":"5a3e68d5-9ee0-4eea-b4c2-436692179924","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★23","server":"172.99.190.61","port":5003,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"ss","name":"🇺🇸美国@Shadow_Cloud★24","server":"167.88.63.59","port":443,"cipher":"aes-256-gcm","password":"pKEW8JPByTVTLtM"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★25","server":"c71s4.jamjams3.net","port":"10922","uuid":"633aa237-6edc-4f81-861c-e0667d97f45d","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"vmess","name":"🇺🇸美国@Shadow_Cloud★26","server":"c71s4.jamjams3.net","port":"10922","uuid":"633aa237-6edc-4f81-861c-e0667d97f45d","alterId":"0","cipher":"auto","network":"tcp"}
