@@ -3,7 +3,7 @@
 ## TG群组:白嫖交流群@Yzcloud
 ## 欢迎关注-->https://t.me/Yzcloud
 ## 创建时间：2022-08-12 01:28:35
-## 节点数量：23
+## 节点数量：45
 ## SUBSCRIBE-MANAGER VERSION: 1.0.2
 #-------------------------------------------------------------#
 #
@@ -31,3 +31,26 @@ proxies:
   - {"type":"vmess","name":"🇺🇸美国@bppd1_21","server":"hncu.qq.gbnodex.com","port":"19079","uuid":"a2230e6e-3d71-4584-a44f-8555503a8a0f","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"🇬🇧英国@bppd1_22","server":"hncu.qq.gbnodex.com","port":"19112","uuid":"a2230e6e-3d71-4584-a44f-8555503a8a0f","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"vmess","name":"🇬🇧英国@bppd1_23","server":"cm1.qqcdnxb.com","port":"19112","uuid":"a2230e6e-3d71-4584-a44f-8555503a8a0f","alterId":"0","cipher":"auto","network":"tcp"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&1","server":"85.208.108.21","port":2375,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&2","server":"85.208.108.21","port":5001,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&3","server":"85.208.108.21","port":3389,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&4","server":"85.208.108.21","port":443,"cipher":"aes-256-gcm","password":"pKEW8JPByTVTLtM"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&5","server":"85.208.108.21","port":7306,"cipher":"aes-256-gcm","password":"FoOiGlkAA9yPEGP"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&6","server":"85.208.108.21","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&7","server":"85.208.108.21","port":9102,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&8","server":"85.208.108.21","port":8881,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&9","server":"85.208.108.21","port":2376,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&10","server":"85.208.108.21","port":7002,"cipher":"aes-256-gcm","password":"RexnBgU7EV5ADxG"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&11","server":"85.208.108.94","port":5001,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&12","server":"85.208.108.94","port":3389,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&13","server":"85.208.108.21","port":5000,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&14","server":"85.208.108.21","port":6379,"cipher":"aes-256-gcm","password":"zDNVedRFPQexG9v"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&15","server":"85.208.108.94","port":8009,"cipher":"aes-256-gcm","password":"XKFKl2rULjIp74"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&16","server":"85.208.108.94","port":8881,"cipher":"aes-256-gcm","password":"kDWvXYZoTBcGkC4"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&17","server":"85.208.108.94","port":2376,"cipher":"aes-256-gcm","password":"faBAoD54k87UJG7"}
+  - {"type":"ss","name":"🇺🇸美国@bppd1&18","server":"167.88.61.14","port":8888,"cipher":"aes-256-gcm","password":"Y6R9pAtvxxzmGC"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&19","server":"85.208.108.21","port":8080,"cipher":"aes-256-gcm","password":"KixLvKzwjekG00rm"}
+  - {"type":"ss","name":"🇯🇵日本@bppd1&20","server":"85.208.108.21","port":8009,"cipher":"aes-256-gcm","password":"XKFKl2rULjIp74"}
+  - {"type":"ss","name":"🇺🇸美国@bppd1&21","server":"167.88.61.14","port":9101,"cipher":"aes-256-gcm","password":"e4FCWrgpkji3QY"}
+  - {"type":"ss","name":"🇺🇸美国@bppd1&22","server":"167.88.61.14","port":8090,"cipher":"aes-256-gcm","password":"PCnnH6SQSnfoS27"}
+  
