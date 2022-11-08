@@ -1,8 +1,16 @@
-//
+//复刻
 {
   "sites": [
- 
-{"key":"csp_apple","name":"影子🍀，更新时间：2022/11/08",
+{
+      "key": "T4_douban",
+      "name": "数据是空的切换第二个首页即可",
+      "type": 4,
+      "api": "http://top.fuqizhishi.com/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },    
+{"key":"csp_apple","name":"影音🍀，更新时间：2022/11/08",
      "type":3,"api":"csp_LiteApple","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
     {
       "key": "csp_Kunyu77",
@@ -1508,7 +1516,7 @@
 		}    
 	},
     {
-      "name": "个人专用",
+      "name": 个人专用",
       "type": 0,
       "url": "https://jx.wangyh.cf/m3u8/?url="
     },
