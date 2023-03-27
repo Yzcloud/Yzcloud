@@ -5,4 +5,4 @@ function operator(proxies) {
 	    p.name = p.name + "_0" + (++counter[p.name]).toString();
 	    return p;
 	  });
-}
+} 
