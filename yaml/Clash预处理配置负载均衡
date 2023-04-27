@@ -1,0 +1,35 @@
+parsers:
+  - reg: '^.*$'
+  # - reg: '^.*$' 匹配所有订阅  
+  # - reg: 'slbable$' 匹配单个订阅 订阅地址后面加上#slbable
+    yaml:
+      append-proxy-groups:
+        - name: 🟢 影子规则-预设
+          type: url-test
+          url: 'http://www.google.com/generate_204'
+          interval: 300
+          tolerance: 50
+        - name: 🔵 负载均衡-散列
+          type: load-balance
+          url: 'http://www.google.com/generate_204'
+          interval: 300
+          strategy: consistent-hashing
+        - name: 🟣 负载均衡-轮询
+          type: load-balance
+          url: 'http://www.google.com/generate_204'
+          interval: 300
+          strategy: round-robin
+      commands:
+        - proxy-groups.🔵 负载均衡-散列.proxies=[]proxyNames
+        - proxy-groups.0.proxies.0+🔵 负载均衡-散列
+        - proxy-groups.🟣 负载均衡-轮询.proxies=[]proxyNames
+        - proxy-groups.0.proxies.0+🟣 负载均衡-轮询
+        - proxy-groups.🟢 影子规则-预设.proxies=[]proxyNames
+        - proxy-groups.0.proxies.0+🟢 影子规则-预设        
+      prepend-rules:
+     #   特殊代理 DIRECT;REJECT
+     #   匹配项：
+     # - DOMAIN-KEYWORD,google.com,
+     # - DOMAIN-SUFFIX
+     # - DOMAIN; IP-CIDR; 
+        - DOMAIN-KEYWORD,google.com,🟢 影子规则-预设
