@@ -30,61 +30,10 @@ parsers: # array
           tolerance: 50
           proxies:
         - name: 手动选择
-          type: select  
-        - name: 苹果服务
+          type: select   
+        - name: 声田音乐 
           type: select
           proxies:
-            - 全球直连
-            - 影子分享
-            - 自动选择
-            - 手动选择
-            - 香港节点
-            - 日本节点
-            - 台湾节点
-            - 美国节点
-            - 狮城节点
-        - name: 微软服务
-          type: select
-          proxies:
-            - 全球直连
-            - 影子分享
-            - 自动选择
-            - 手动选择  
-            - 香港节点
-            - 日本节点
-            - 台湾节点
-            - 美国节点
-            - 狮城节点  
-        - name: 国际媒体
-          type: select
-          proxies:
-            - 自动选择
-            - 手动选择
-            - 香港节点
-            - 日本节点
-            - 台湾节点
-            - 美国节点
-            - 狮城节点
-            - DIRECT
-        - name: OpenAi
-          type: select
-          proxies:
-            - 美国节点
-        - name: 谷歌服务
-          type: select
-          proxies:
-            - 自动选择
-            - 手动选择
-            - 香港节点
-            - 日本节点
-            - 台湾节点
-            - 美国节点
-            - 狮城节点
-        - name: 电报信息
-          type: select
-          proxies:
-            - 自动选择
-            - 手动选择
             - 香港节点
             - 日本节点
             - 台湾节点
@@ -93,48 +42,60 @@ parsers: # array
         - name: 推特服务
           type: select
           proxies:
-            - 自动选择
-            - 手动选择
             - 香港节点
             - 日本节点
             - 台湾节点
             - 美国节点
-            - 狮城节点    
+            - 狮城节点
         - name: 香港节点
           type: url-test
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 50
           proxies:
-          filter: 港|HK|(?i)Hong
+          filter: 🇭🇰|港|HK|(?i)Hong
         - name: 日本节点
           type: url-test
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 50
           proxies:
-          filter: 日|东京|JP|(?i)Japan
+          filter: 🇯🇵|日|东京|JP|(?i)Japan
         - name: 台湾节点
           type: url-test
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 50
           proxies:
-          filter: 台|湾|TW|(?i)Taiwan
+          filter: 🇹🇼|台|湾|TW|(?i)Taiwan
         - name: 美国节点
           type: url-test
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 50
           proxies:
-          filter: 美|US|(?i)States|American
+          filter: 🇺🇸|美|US|(?i)States|American
         - name: 狮城节点
           type: url-test
           url: http://www.gstatic.com/generate_204
           interval: 300
           tolerance: 50
           proxies:
-          filter: 新|坡|SG|(?i)Singapore        
+          filter: 🇸🇬|新|坡|SG|(?i)Singapore 
+        - name: 苹果服务
+          type: select
+          proxies:
+            - 全球直连
+            - 影子分享
+            - 自动选择
+            - 手动选择
+        - name: 微软服务
+          type: select
+          proxies:
+            - 全球直连
+            - 影子分享
+            - 自动选择
+            - 手动选择 
         - name: 全球直连
           type: select
           proxies:
@@ -159,6 +120,7 @@ parsers: # array
             - 台湾节点
             - 美国节点
             - 狮城节点
+            - DIRECT
   # 策略组示例
                # - name: 分组名
                # type: select       # 手动选点   
@@ -174,13 +136,19 @@ parsers: # array
       commands:
         - proxy-groups.自动选择.proxies=[]proxyNames # 向指定策略组添加订阅中的节点名，可使用正则过滤
       # - proxy-groups.自动选择.proxies.0+DIRECT # 向指定分组第一个位置添加一个 DIRECT 节点名
-        - proxy-groups.手动选择.proxies=[]proxyNames # 向指定策略组添加订阅中的节点名，可使用正则过滤
-        - proxy-groups.手动选择.proxies.1+DIRECT # 向指定分组第一个位置添加一个 DIRECT 节点名
-        - proxy-groups.香港节点.proxies=[]proxyNames|港|HK|Hong # 向指定策略组添加订阅中的节点名，可使用正则过滤
-        - proxy-groups.日本节点.proxies=[]proxyNames|日|东京|JP|Japan # 向指定策略组添加订阅中的节点名，可使用正则过滤
-        - proxy-groups.台湾节点.proxies=[]proxyNames|台|湾|TW|Taiwan # 向指定策略组添加订阅中的节点名，可使用正则过滤
-        - proxy-groups.美国节点.proxies=[]proxyNames|美|US|States|American # 向指定策略组添加订阅中的节点名，可使用正则过滤
-        - proxy-groups.狮城节点.proxies=[]proxyNames|新|坡|SG|Singapore # 向指定策略组添加订阅中的节点名，可使用正则过滤
+        - proxy-groups.手动选择.proxies=[]proxyNames
+        - proxy-groups.手动选择.proxies.1+DIRECT
+        - proxy-groups.香港节点.proxies=[]proxyNames|港|HK|Hong|🇭🇰
+        - proxy-groups.香港节点.proxies.1+DIRECT
+        - proxy-groups.日本节点.proxies=[]proxyNames|日|东京|JP|Japan|🇯🇵
+        - proxy-groups.日本节点.proxies.1+DIRECT
+        - proxy-groups.台湾节点.proxies=[]proxyNames|台|湾|TW|Taiwan|🇹🇼
+        - proxy-groups.台湾节点.proxies.1+DIRECT
+        - proxy-groups.美国节点.proxies=[]proxyNames|美|US|States|American|🇺🇸
+        - proxy-groups.美国节点.proxies.1+DIRECT
+        - proxy-groups.狮城节点.proxies=[]proxyNames|新|坡|SG|Singapore|🇸🇬
+        - proxy-groups.狮城节点.proxies.1+DIRECT
+
         
         # 一些可能用到的正则过滤节点示例，使分组更细致
         # []proxyNames|a                         # 包含a
@@ -203,24 +171,12 @@ parsers: # array
           interval: 86400
           url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml"
           path: ./ruleset/Lan.yaml
-        Download:
-          type: http
-          behavior: classical
-          interval: 86400
-          url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml"
-          path: ./ruleset/Download.yaml
         reject: # 广告域名列表
           type: http
           behavior: domain
           url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
           path: ./ruleset/reject.yaml
           interval: 86400
-        GlobalMedia:
-          type: http
-          behavior: classical
-          interval: 86400
-          url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml"
-          path: ./ruleset/GlobalMedia.yaml
         Apple:
           type: http
           behavior: classical
@@ -239,18 +195,12 @@ parsers: # array
           interval: 86400
           url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
           path: ./ruleset/Google.yaml
-        Telegram:
+        Spotify:
           type: http
           behavior: classical
           interval: 86400
-          url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml"
-          path: ./ruleset/Telegram.yaml
-        OpenAi:
-          type: http
-          behavior: classical
-          interval: 86400
-          url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
-          path: ./ruleset/OpenAi.yaml
+          url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
+          path: ./ruleset/Spotify.yaml
         Twitter:
           type: http
           behavior: classical
@@ -274,13 +224,11 @@ parsers: # array
       prepend-rules: # 规则由上往下遍历，如上面规则已经命中，则不再往下处理
         - RULE-SET,Direct,DIRECT
         - RULE-SET,Lan,DIRECT
-        - RULE-SET,Download,DIRECT
         - RULE-SET,reject,广告拦截
-        - RULE-SET,GlobalMedia,国际媒体
         - RULE-SET,Apple,苹果服务
         - RULE-SET,Github,影子分享
-        - RULE-SET,Google,谷歌服务
-        - RULE-SET,Telegram,电报信息
+        - RULE-SET,Spotify,声田音乐
+        - RULE-SET,Google,影子分享
         - RULE-SET,Twitter,推特服务
         - RULE-SET,ProxyLite,影子分享
         - RULE-SET,ChinaIP,DIRECT
