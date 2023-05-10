@@ -1,29 +1,42 @@
-{  
-  "user": {
-    "name": "不敢share真名的憨憨", // 用户名
-    "avatar": "", // 用户头像
-    "desc": "Hi~小可爱！会不定时分享福利哦！让憨憨陪伴你更久✧( •˓◞•̀ )" // 用户描述
+{
+  "sites": { // 站点源
+    "default": 1, // 默认值：需为data中需要设置的id
+    "data": [ // 所有数据
+      {
+        "id": 1, // id 唯一值不可重复
+        "key": "39kan",
+        "name": "39影视", // 名称
+        "api": "https://www.39kan.com/api.php/provide/vod/", // 站点源地址
+        "type": 1, // 1cms资源 预留
+        "jiexiUrl": "", // 需要配合解析的地址 预留
+        "group": "影视", // 分组
+        "isActive": true, // 是否启用 true启用 false 禁用
+        "status": true, // 状态 true可用 false 失效
+      }
+    ]
   },
-  "share": [
-    {
-      "type": "recommend",  // 类型 recommend分享影视  source分享源
-      "key": "向往的生活", // 关键字 类型为recommend时影视搜索的关键字 类型为source时 站点源为site  直播源为iptv  解析源为analyze
-      "img": "https://4img.hitv.com/preview/sp_images/2023/05/05/202305051335152292032.jpg_220x125.jpg", // 海报 类型为recommend生效
-      "url": {}, // 类型为 source 生效 内容与前面添加源一致，不要带 id 属性（重要）
-      "desc": "影片推荐：向往的生活，超级好看！", // 描述
-      "time": "2023-05-07" // 发布时间
-    },
-    {
-      "type": "source",
-      "key": "analyze",
-      "img": "",
-      "url": {
-        "name": "爱豆",
-        "url": "https://jx.aidouer.net/?url=",
-        "isActive": true
-      },
-      "desc": "解析源：爱豆解析",
-      "time": "2023-05-07"
-    }
-  ]
+  "iptv": { // 直播源
+    "default": 1, // 默认值：需为data中需要设置的id
+    "data": [
+      {
+        "id": 1, // id 唯一值不可重复
+        "name": "APTV", // 名称
+        "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u", // 直播源地址
+        "epg": "", // 电子节目单地址
+        "type": "remote", // remote为远程m3u local本地m3u文件路径
+        "isActive": true // 是否启用 true启用 false 禁用
+      }
+    ]
+  },
+  "analyzes": { // 解析源
+    "default": 2, // 默认值：需为data中需要设置的id
+    "data": [
+      {
+        "id": 2, // id 唯一值不可重复
+        "name": "爱豆", // 名称
+        "url": "https://jx.aidouer.net/?url=", // 解析源地址
+        "isActive": true // 是否启用 true启用 false 禁用
+      }
+    ]
+  }
 }
