@@ -1,0 +1,29 @@
+{  
+  "user": {
+    "name": "不敢share真名的憨憨", // 用户名
+    "avatar": "", // 用户头像
+    "desc": "Hi~小可爱！会不定时分享福利哦！让憨憨陪伴你更久✧( •˓◞•̀ )" // 用户描述
+  },
+  "share": [
+    {
+      "type": "recommend",  // 类型 recommend分享影视  source分享源
+      "key": "向往的生活", // 关键字 类型为recommend时影视搜索的关键字 类型为source时 站点源为site  直播源为iptv  解析源为analyze
+      "img": "https://4img.hitv.com/preview/sp_images/2023/05/05/202305051335152292032.jpg_220x125.jpg", // 海报 类型为recommend生效
+      "url": {}, // 类型为 source 生效 内容与前面添加源一致，不要带 id 属性（重要）
+      "desc": "影片推荐：向往的生活，超级好看！", // 描述
+      "time": "2023-05-07" // 发布时间
+    },
+    {
+      "type": "source",
+      "key": "analyze",
+      "img": "",
+      "url": {
+        "name": "爱豆",
+        "url": "https://jx.aidouer.net/?url=",
+        "isActive": true
+      },
+      "desc": "解析源：爱豆解析",
+      "time": "2023-05-07"
+    }
+  ]
+}
